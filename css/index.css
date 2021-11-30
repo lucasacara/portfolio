@@ -1,0 +1,143 @@
+@font-face { 
+  font-family: 'Report Regular';
+  src: url('../fonts/ReportRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: 'Report SemiBold';
+  src: url('../fonts/ReportSemibold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face { 
+  font-family: 'Report Bold';
+  src: url('../fonts/ReportBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: auto;
+    
+    --corTexto1: #F2EDF6;
+    --corTexto2: rgba(34,33,45,0.7);
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+    
+    background-color: #1F1F27;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    background-image: url(../img/home/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pnCabecalho {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 64px;
+    text-align: center;
+}
+
+#pnCabecalho svg {
+    position: relative;
+    height: 28px;
+}
+
+#pnCabecalho svg path {
+    fill: #E9B6FF;
+}
+
+#lbTitulo {
+    position: relative;
+    margin-top: 64px;
+    
+    font-family: "Report Bold";
+    font-size: 32px;
+    text-align: center;
+    color: var(--corTexto1);
+}
+
+#pnDCode {
+    position: relative;
+    width: 100%;
+    height: 678px;
+    margin-top: 256px;
+}
+
+#pnDCode svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: max-content;
+}
+
+#pnDCode svg path {
+    background: linear-gradient(208.42deg, #E477F6 6.3%, #7B59F5 55.61%);
+    drop-shadow: 0px 0px 72px rgba(0, 0, 0, 0.25);
+}
+
+.lbTit {    
+    font-family: "Report Bold";
+    font-size: 32px;
+    text-align: center;
+    color: var(--corTexto1);
+    width: 100%;
+}
+
+.lbDesc {    
+    font-family: "Report SemiBold";
+    font-size: 18px;
+    text-align: center;
+    color: var(--corTexto1);
+    width: 100%;
+}
+
+.font-center {
+    text-align: center;
+}
+
+#pnDCode .lbTit {
+    position: absolute;
+    color: var(--corTexto2);
+    
+    top: 184px;    
+}
+
+#pnDCode .lbDesc {
+    position: absolute;
+    color: var(--corTexto2);
+    width: 68%;
+    left: 16%;
+    top: 248px;
+}
+
+#imgGato {
+    position: absolute;
+    width: 325px;
+    height: 270px;
+    left: calc(((100vw - 325px) / 2) + 25px);
+    top: 400px;
+    
+    background-image: url(../img/home/gatobruxo.png);
+}
