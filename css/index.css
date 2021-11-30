@@ -12,7 +12,6 @@
   font-style: normal;
 }
 
-
 @font-face { 
   font-family: 'Report Bold';
   src: url('../fonts/ReportBold.ttf') format('truetype');
@@ -29,6 +28,7 @@ html {
     
     --corTexto1: #F2EDF6;
     --corTexto2: rgba(34,33,45,0.7);
+    --corTexto3: #C9C7E1;
 }
 
 body{
@@ -40,6 +40,11 @@ body{
     background-color: #1F1F27;
 }
 
+* {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    user-select: none;
+}
+
 #container {
     position: relative;
     width: 100%;
@@ -48,13 +53,15 @@ body{
     background-image: url(../img/home/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
+    overflow: hidden;
 }
 
 #pnCabecalho {
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 64px;
+    padding-top: 82px;
     text-align: center;
 }
 
@@ -81,7 +88,7 @@ body{
     position: relative;
     width: 100%;
     height: 678px;
-    margin-top: 256px;
+    margin-top: 174px;
 }
 
 #pnDCode svg {
@@ -100,16 +107,14 @@ body{
 .lbTit {    
     font-family: "Report Bold";
     font-size: 32px;
-    text-align: center;
     color: var(--corTexto1);
     width: 100%;
 }
 
 .lbDesc {    
-    font-family: "Report SemiBold";
-    font-size: 18px;
-    text-align: center;
-    color: var(--corTexto1);
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: var(--corTexto3);
     width: 100%;
 }
 
@@ -125,6 +130,7 @@ body{
 }
 
 #pnDCode .lbDesc {
+    font-family: "Report SemiBold";
     position: absolute;
     color: var(--corTexto2);
     width: 68%;
@@ -140,4 +146,155 @@ body{
     top: 400px;
     
     background-image: url(../img/home/gatobruxo.png);
+}
+
+#pnProjetos {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 148px;
+}
+
+#cont-carrossel {
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    overflow-x: scroll;
+}
+
+#carrossel {
+    position: relative;
+    
+    height: 400px;
+    width: max-content;
+    
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#carrossel .card {
+    width: 200px;
+    height: 290px;
+    
+    background: #414151;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    
+    padding: 26px;
+}
+
+#carrossel .card .lbTit {
+    font-size: 24px;
+    color: var(--corTexto3);
+}
+
+#carrossel .card .lbDesc {
+    font-size: 18px;
+    color: var(--corTexto3);
+}
+
+#carrossel .card + .card {
+    margin-left: 20px;
+}
+
+#descCarrossel {
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: #373642;
+    width: 100%;
+    
+    letter-spacing: 6px;
+    margin-top: -36px;
+}
+
+#pnContato {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 112px;
+}
+
+.botao {
+    position: relative;
+    width: 100%;
+    height: 56px;
+
+    background-color: rgba(0, 0, 0, 0.21);
+    border-radius: 61px;
+    
+    margin-top: 22px;
+}
+
+.center {
+    position: absolute;
+    
+    width: fit-content;
+    height: fit-content;
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.botao .center svg path {
+    fill: var(--corTexto3);
+}
+
+.botao .center .desc {
+    position: relative;
+    margin-left: 18px;
+    margin-top: 4px;
+    
+    font-family: "Report Bold";
+    font-size: 18px;
+    color: var(--corTexto3);
+    width: 100%;
+}
+
+.botao.colorido {
+    margin-top: 56px;
+    background: linear-gradient(270deg, #BB3AFD 2.76%, #883AFF 100%);
+}
+
+.botao.colorido .desc{
+    color: var(--corTexto2);
+}
+
+.botao.colorido svg path{
+    fill: var(--corTexto2);
+}
+
+#pnRodape {
+    position: relative;
+    width: 100%;
+    height: 124px;
+
+    background: #3B3645;
+    margin-top: 124px;
+    border-radius: 29px 29px 0px 0px;
+    
+    text-align: center;
+    font-family: "Report Regular";
+    font-size: 14px;
+    color: var(--corTexto3);
 }
