@@ -104,6 +104,18 @@ body{
     drop-shadow: 0px 0px 72px rgba(0, 0, 0, 0.25);
 }
 
+.elemento1 {
+    position: absolute;
+    width: 48px;
+    height: 81px;
+    
+    background-image: url(../img/home/elemento3.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    top: 112px;
+    right: 0;
+}
+
 .lbTit {    
     font-family: "Report Bold";
     font-size: 32px;
@@ -208,6 +220,21 @@ body{
 
 #carrossel .card + .card {
     margin-left: 20px;
+}
+
+.elemento2 {
+    position: absolute;
+    width: 117px;
+    height: 106px;
+    
+    background-image: url(../img/home/elemento4.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    
+    top: 1400px;
+    left: -8px;
+    
+    z-index: 1000;
 }
 
 #descCarrossel {
