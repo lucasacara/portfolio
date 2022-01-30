@@ -106,13 +106,28 @@
     background-color: #1F1F27;
 }
 
+.espacador {
+    position: relative;
+    width: 100%;
+    background-color: var(-corEscura1);
+}
+
+.espacador.h112{
+    height: 112px;
+}
+
+.espacador.h152{
+    height: 152px;
+}
+
 #SobreMim .conteudo {
     position: relative;
     width: calc(100% - (var(--margemLateral) * 2));
     margin-left: var(--margemLateral);
     height: auto;
+    
     margin-top: 112px;
-    margin-bottom: 112px;
+    margin-bottom: 152px;
 }
 
 #SobreMim .conteudo .titulo {
@@ -163,4 +178,238 @@
     line-height: 28px;
     
     margin-bottom: 48px;
+}
+
+
+
+/* SEÇÃO 3 - Projetos */
+#Projetos {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    background-color: #1F1F27;
+}
+
+#Projetos .conteudo {
+    position: relative;
+    width: calc(100% - (var(--margemLateral) * 2));
+    margin-left: var(--margemLateral);
+    height: auto;
+}
+
+#Projetos .conteudo .titulo {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara1);
+    font-family: "Report Bold";
+    font-size: 56px;
+    
+    margin-bottom: 12px;
+}
+
+#Projetos .conteudo .textoColorido {
+    position: relative;
+    width: 100%;
+    
+    font-family: "Report Bold";
+    font-size: 24px;
+    
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#Projetos .conteudo .textoColorido:hover {
+    color: #6BACFF;
+}
+
+#cont-carrossel {
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    overflow-x: scroll;
+}
+
+#carrossel {
+    position: relative;
+    
+    height: 400px;
+    width: max-content;
+    
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    padding-left: var(--margemLateral);
+    padding-right: var(--margemLateral);
+}
+
+#carrossel .card{
+    width: 200px;
+    height: 290px;
+    
+    background-color: #414151;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    
+    padding: 26px;
+}
+
+#carrossel .card .lbTit {
+    font-family: "Report Bold";
+    font-size: 24px;
+    color: var(--corClara1);
+    margin-bottom: 4px;
+}
+
+#carrossel .card .lbDesc {
+    font-family: "Report Regular";
+    font-size: 20px;
+    color: var(--corClara2);
+}
+
+#carrossel .card + .card {
+    margin-left: 20px;
+}
+
+.elemento {
+    position: absolute;
+    width: 117px;
+    height: 106px;
+    
+    background-image: url(../img/home/img_elemento.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    
+    top: -24px;
+    right: -24px;
+    
+    animation: float 6s ease-in-out infinite;
+}
+
+#descCarrossel {
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: #373642;
+    width: 100%;
+    text-align: center;
+    
+    letter-spacing: 6px;
+    margin-top: -36px;
+    margin-bottom: 112px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px) rotate(5deg);
+	}
+    50% {
+		transform: translatey(-20px)  rotate(0deg);
+	}
+	100% {
+		transform: translatey(0px)  rotate(5deg);
+	}
+}
+
+
+/* SEÇÃO 4 - Contato */
+#Contato {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    z-index: -1;
+    
+    background-color: var(--corBase1);
+}
+
+#Contato .conteudo {
+    position: absolute;
+    width: calc(100% - (var(--margemLateral) * 2));
+    margin-left: var(--margemLateral);
+    height: auto;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-family: "Report Regular";
+    color: var(--corClara1);
+}
+
+#Contato .conteudo .titulo {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara1);
+    font-family: "Report Bold";
+    font-size: 56px;
+    
+    margin-bottom: 36px;
+}
+
+#Contato .conteudo .item_contato {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#Contato .conteudo .item_contato {
+    margin-top: 18px;
+}
+
+#Contato .conteudo .item_contato .icone {
+    margin-right: 12px;
+}
+
+#Contato .conteudo .item_contato .desc {
+    font-size: 24px;
+}
+
+#Contato .conteudo .item_contato .desc.bold {
+    font-family: "Report Bold";
+}
+
+#imgGato {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-left: 5%;
+    margin-top: 32px;
+    
+    background-image: url(../img/home/img_gato.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#btPoliticaPriv {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    
+    font-size: 22px;
+    font-family: "Report Bold";
+    
+    margin-top: 24px;
+}
+
+#lbTextoLegal {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    
+    margin-top: 8px;
+    opacity: 0.7;
 }
