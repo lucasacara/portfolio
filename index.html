@@ -46,7 +46,7 @@
         <div id="container">
             
             <!-- ELEMENTOS FLUTUANTES -->
-            <div id="cabMobile">
+            <div id="cabMobile" class="">
                 <div id="btMenuMob" onclick="abrirMenuMob()">
                     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2C1 1.44772 1.44772 1 2 1H22C22.5523 1 23 1.44772 23 2C23 2.55228 22.5523 3 22 3H2C1.44772 3 1 2.55228 1 2ZM1 10C1 9.44772 1.44772 9 2 9H22C22.5523 9 23 9.44772 23 10C23 10.5523 22.5523 11 22 11H2C1.44772 11 1 10.5523 1 10ZM1 18C1 17.4477 1.44772 17 2 17H22C22.5523 17 23 17.4477 23 18C23 18.5523 22.5523 19 22 19H2C1.44772 19 1 18.5523 1 18Z" fill="#95BEF4"/>
@@ -116,9 +116,31 @@
             <!-- SEÇÃO 1: TOPO -->
             <div id="Home">
                 <div id="imgPrisma"></div>
-                <div id="pnConhecerMob">
+                <div id="pnConhecerMob" class="visivel">
                     <div class="lbConhecer">CONHEÇA</div>
                     <div id="pnDeslizanteMob"></div>
+                </div>
+            </div>
+            
+            <div id="SobreMim">
+                <div class="conteudo">
+                    <div class="anotacao">
+                        <div class="texto">ou só "lusca"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mesmo :)</div>
+                        <div class="seta">
+                            <svg width="35" height="49" viewBox="0 0 35 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.1609 0.0592631C22.4559 -0.0470727 22.7836 -0.00889342 23.0463 0.162394L34.5463 7.66239C35.0089 7.96409 35.1393 8.58367 34.8376 9.04627C34.5359 9.50887 33.9163 9.63931 33.4537 9.33761L23.0627 2.56083L18.9551 15.7964C18.7914 16.3239 18.2311 16.6188 17.7036 16.4551C17.1761 16.2914 16.8812 15.7311 17.0449 15.2036L21.5449 0.703605C21.6379 0.404136 21.8659 0.165599 22.1609 0.0592631ZM26.2831 10.5238C26.8222 10.404 27.3564 10.7439 27.4762 11.2831C30.3476 24.2045 26.6741 33.1797 20.81 39.0917C15.0007 44.9485 7.12725 47.7185 1.63926 48.4903C1.09235 48.5672 0.586654 48.1862 0.509746 47.6393C0.432838 47.0924 0.813844 46.5867 1.36075 46.5097C6.53943 45.7815 13.966 43.1516 19.39 37.6833C24.7592 32.2703 28.2524 23.9955 25.5238 11.7169C25.404 11.1778 25.7439 10.6436 26.2831 10.5238Z" fill="#F4FAFF"/>
+</svg>
+
+                        </div>
+                    </div>
+                    <div class="titulo">oiê, sou o<br><span class="textoColorido">lucas acara</span>.</div>
+                    <div class="texto">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante.</p>
+                        <p>Vivamus molestie eros eget justo consectetur, at finibus neque sodales. Morbi vel turpis iaculis, facilisis justo vel, consequat metus. Vestibulum placerat egestas nibh. Integer a auctor nunc, id tincidunt enim.</p>
+                    </div>
+                    <div class="botaoContorno">
+                        <div class="texto">ah, quero saber mais :)</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,4 +164,19 @@
                 setTimeout(function(){$('#menuHoverMobile').addClass('visivel');}, 50);
             }
         }
+        
+        setInterval( function () {
+            if ((document.body.scrollTop > 170) || (document.documentElement.scrollTop > 170)) {
+                $('#cabMobile').addClass('flutuante');
+            } else {
+                $('#cabMobile').removeClass('flutuante');
+            }
+            
+            if ((document.body.scrollTop > (window.innerHeight/2)) || (document.documentElement.scrollTop > (window.innerHeight/2))) {
+                $('#pnConhecerMob').removeClass('visivel');
+            } else {
+                $('#pnConhecerMob').addClass('visivel');
+            }
+            
+        }, 250);
     </script>

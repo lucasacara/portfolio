@@ -52,6 +52,13 @@
     left: 50%;
     
     transform: translatex(-50%);
+    transition: 2s ease;
+    opacity: 0;
+}
+
+#pnConhecerMob.visivel {
+    opacity: 1;
+    
 }
 
 .lbConhecer {
@@ -81,11 +88,79 @@
         height: 0px;
     }
     40% {
-        height: 20px;
+        height: 30px;
     }
     80%{
         height:0px;
-        top: 100px;
+        top: 120px;
     }
 
+}
+
+/* SEÇÃO 2 - Sobre Mim */
+#SobreMim {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    background-color: #1F1F27;
+}
+
+#SobreMim .conteudo {
+    position: relative;
+    width: calc(100% - (var(--margemLateral) * 2));
+    margin-left: var(--margemLateral);
+    height: auto;
+    margin-top: 112px;
+    margin-bottom: 112px;
+}
+
+#SobreMim .conteudo .titulo {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara1);
+    font-family: "Report Bold";
+    font-size: 56px;
+    
+    margin-bottom: 32px;
+}
+
+.textoColorido {
+    color: var(--corBase2);
+}
+
+#SobreMim .conteudo .anotacao {
+    position: absolute;
+    left: 55%;
+    top: -64px;
+}
+
+#SobreMim .conteudo .anotacao .texto {
+    color: var(--corClara2);
+    font-family: "Report Regular";
+    font-size: 1.3em;
+    
+    transform: rotate(-15deg)
+}
+
+#SobreMim .conteudo .anotacao .seta svg path {
+    fill: var(--corClara2);
+}
+
+#SobreMim .conteudo .anotacao .seta{
+    margin-top: 4px;
+    margin-left: 56px;
+}
+
+#SobreMim .conteudo > .texto {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara2);
+    font-family: "Report regular";
+    font-size: 23px;
+    line-height: 28px;
+    
+    margin-bottom: 48px;
 }
