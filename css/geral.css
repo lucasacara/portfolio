@@ -169,6 +169,7 @@ a:any-link {
     font-size: 1.4em;
     
     padding: var(--margemLateral);
+    padding-bottom: calc(84px);
     transition: 0.25s ease;
     transition-delay: 0.1s;
 }
