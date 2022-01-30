@@ -1,0 +1,357 @@
+@font-face { 
+  font-family: 'Report Regular';
+  src: url('../fonts/ReportRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: 'Report SemiBold';
+  src: url('../fonts/ReportSemibold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: 'Report Bold';
+  src: url('../fonts/ReportBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: auto;
+    
+    --corTexto1: #F2EDF6;
+    --corTexto2: rgba(34,33,45,0.7);
+    --corTexto3: #C9C7E1;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+    
+    background-color: #1F1F27;
+}
+
+* {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    user-select: none;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    background-image: url(../img/home/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+#pnCabecalho {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 82px;
+    text-align: center;
+}
+
+#pnCabecalho svg {
+    position: relative;
+    height: 28px;
+}
+
+#pnCabecalho svg path {
+    fill: #E9B6FF;
+}
+
+#lbTitulo {
+    position: relative;
+    margin-top: 64px;
+    
+    font-family: "Report Bold";
+    font-size: 32px;
+    text-align: center;
+    color: var(--corTexto1);
+}
+
+#pnDCode {
+    position: relative;
+    width: 100%;
+    height: 678px;
+    margin-top: 174px;
+}
+
+#pnDCode svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: max-content;
+}
+
+#pnDCode svg path {
+    background: linear-gradient(208.42deg, #E477F6 6.3%, #7B59F5 55.61%);
+    drop-shadow: 0px 0px 72px rgba(0, 0, 0, 0.25);
+}
+
+.elemento1 {
+    position: absolute;
+    width: 48px;
+    height: 81px;
+    
+    background-image: url(../img/home/elemento3.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    top: 112px;
+    right: 0;
+    animation: float 6s ease-in-out infinite;
+}
+
+.lbTit {    
+    font-family: "Report Bold";
+    font-size: 32px;
+    color: var(--corTexto1);
+    width: 100%;
+}
+
+.lbDesc {    
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: var(--corTexto3);
+    width: 100%;
+}
+
+.font-center {
+    text-align: center;
+}
+
+#pnDCode .lbTit {
+    position: absolute;
+    color: var(--corTexto2);
+    
+    top: 184px;    
+}
+
+#pnDCode .lbDesc {
+    font-family: "Report SemiBold";
+    position: absolute;
+    color: var(--corTexto2);
+    width: 68%;
+    left: 16%;
+    top: 248px;
+}
+
+#imgGato {
+    position: absolute;
+    width: 325px;
+    height: 270px;
+    left: calc(((100vw - 325px) / 2) + 25px);
+    top: 400px;
+    
+    background-image: url(../img/home/gatobruxo.png);
+}
+
+#pnProjetos {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 164px;
+}
+
+#cont-carrossel {
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    overflow-x: scroll;
+}
+
+#carrossel {
+    position: relative;
+    
+    height: 400px;
+    width: max-content;
+    
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#carrossel .card{
+    width: 200px;
+    height: 290px;
+    
+    background-color: #414151;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    
+    padding: 26px;
+}
+
+.card.c1 {
+    background-image: url(../img/home/materiopedia.png);
+}
+
+.card.c2 {
+    background-image: url(../img/home/reftrend.png);
+}
+
+.card.c3 {
+    background-image: url(../img/home/qon.png);
+}
+
+.card.c4 {
+    background-image: url(../img/home/bestiario.png);
+}
+
+#carrossel .card .lbTit {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+#carrossel .card .lbDesc {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+#carrossel .card + .card {
+    margin-left: 20px;
+}
+
+.elemento2 {
+    position: absolute;
+    width: 117px;
+    height: 106px;
+    
+    background-image: url(../img/home/elemento4.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    
+    top: 1342px;
+    left: -8px;
+    
+    z-index: 1000;
+    animation: float 6s ease-in-out infinite;
+}
+
+#descCarrossel {
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: #373642;
+    width: 100%;
+    
+    letter-spacing: 6px;
+    margin-top: -36px;
+}
+
+#pnContato {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 112px;
+}
+
+.botao {
+    position: relative;
+    width: 100%;
+    height: 56px;
+
+    background-color: rgba(0, 0, 0, 0.21);
+    border-radius: 61px;
+    
+    margin-top: 22px;
+}
+
+.center {
+    position: absolute;
+    
+    width: fit-content;
+    height: fit-content;
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.botao .center svg path {
+    fill: var(--corTexto3);
+}
+
+.botao .center .desc {
+    position: relative;
+    margin-left: 18px;
+    margin-top: 4px;
+    
+    font-family: "Report Bold";
+    font-size: 18px;
+    color: var(--corTexto3);
+    width: 100%;
+}
+
+.botao.colorido {
+    margin-top: 56px;
+    background: linear-gradient(270deg, #BB3AFD 2.76%, #883AFF 100%);
+}
+
+.botao.colorido .desc{
+    color: var(--corTexto2);
+}
+
+.botao.colorido svg path{
+    fill: var(--corTexto2);
+}
+
+#pnRodape {
+    position: relative;
+    width: 100%;
+    height: 124px;
+
+    background: #3B3645;
+    margin-top: 124px;
+    border-radius: 29px 29px 0px 0px;
+    
+    text-align: center;
+    font-family: "Report Regular";
+    font-size: 14px;
+    color: var(--corTexto3);
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px) rotate(5deg);
+	}
+    50% {
+		transform: translatey(-20px)  rotate(0deg);
+	}
+	100% {
+		transform: translatey(0px)  rotate(5deg);
+	}
+}
