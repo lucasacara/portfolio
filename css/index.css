@@ -249,7 +249,7 @@
 }
 
 #carrossel .card{
-    width: 200px;
+    width: 190px;
     height: 290px;
     
     background-color: #414151;
@@ -262,23 +262,45 @@
     flex-flow: column-reverse;
     
     padding: 26px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
 }
 
 #carrossel .card .lbTit {
     font-family: "Report Bold";
     font-size: 24px;
-    color: var(--corClara1);
     margin-bottom: 4px;
 }
 
 #carrossel .card .lbDesc {
     font-family: "Report Regular";
     font-size: 20px;
-    color: var(--corClara2);
 }
 
 #carrossel .card + .card {
     margin-left: 20px;
+}
+
+.card.c1 {
+    background-image: url(../img/home/proj_RomaPeugeot.png);
+    color: var(--corClara1);
+}
+
+.card.c2 {
+    background-image: url(../img/home/proj_Zucatelli.png);
+    color: #0061DE;
+}
+
+.card.c3 {
+    background-image: url(../img/home/proj_materiopedia.png);
+    color: #eb3c32;
+}
+
+.card.c4 {
+    background-image: url(../img/home/proj_Lamure.png);
+    color: #e12b72;
 }
 
 .elemento {
