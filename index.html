@@ -179,7 +179,16 @@
                 </div>
                 <div id="cont-carrossel">
                     <div id="carrossel">
-                        <div class="card c1">
+                        <div class="card c5" onclick="goTo('https://lucasjleismann.github.io/diario/index.html')">
+                            <div class="lbDesc">
+                                ui/ux
+                            </div>
+                            <div class="lbTit">
+                                Diário de Bordo
+                            </div>
+                        </div>
+                        
+                        <div class="card c1" onclick="goTo('em-construcao.html')">
                             <div class="lbDesc">
                                 ui/ux
                             </div>
@@ -188,7 +197,7 @@
                             </div>
                         </div>
                         
-                        <div class="card c2">
+                        <div class="card c2" onclick="goTo('em-construcao.html')">
                             <div class="lbDesc">
                                 ui/ux
                             </div>
@@ -197,7 +206,7 @@
                             </div>
                         </div>
                         
-                        <div class="card c3">
+                        <div class="card c3" onclick="goTo('em-construcao.html')">
                             <div class="lbDesc">
                                 editorial
                             </div>
@@ -206,21 +215,12 @@
                             </div>
                         </div>
 
-                        <div class="card c4">
+                        <div class="card c4" onclick="goTo('em-construcao.html')">
                             <div class="lbDesc">
                                 ui/ux
                             </div>
                             <div class="lbTit">
                                 Ecommerce Lamûre
-                            </div>
-                        </div>
-                        
-                        <div class="card c5">
-                            <div class="lbDesc">
-                                ui/ux
-                            </div>
-                            <div class="lbTit">
-                                Diário de Bordo
                             </div>
                         </div>
                     </div>
@@ -395,23 +395,23 @@
         var vQtdProjetos = 5;
         var pLinkAtual   = "";
         var vPosProjeto  = 0;
-        var pTitulos     = ["Roma<span>ui/ux</span><br>Peugeot",
+        var pTitulos     = ["Diário<span>ui/ux</span><br>de Bordo",
+                            "Roma<span>ui/ux</span><br>Peugeot",
                             "Zucatelli<span>ui/ux</span><br>Máquinas",
                             "Materiopedia<br><span>editorial</span>",
-                            "E-commerce<span>ui/ux</span><br>Lamûre",
-                            "Diário<span>ui/ux</span><br>de Bordo"];
+                            "E-commerce<span>ui/ux</span><br>Lamûre"];
         
-        var pDescs       = ["Interface visual desenvolvida pra a concessionária Peugeot, pertencente ao Grupo Roma. Criado em parceria com a Agência Reweb, o site apresenta uma interface moderna e jovem, alinhada ao novo posicionamento de marca da Peugeot.",
+        var pDescs       = ["Metade blog, metade caderno de anotações. \"Diário de Bordo\" é um portal criado para registrar pensamentos e reflexões que permeiam a produção criativa durante a pandemia.",
                             "Conjunto de artes desenvolvidas para a Landing Page do cliente Zucatelli Máquinas, apresentando os principais tratores e maquinários oferecidos pelo mesmo.",
                             "Escrito e diagramado com base no conteúdo da disciplina de Materiais e Processos Gráficos, \"Materiopedia\" é um guia prático para designers, focado em apresentar as diferenças entre diferentes materiais e processos de impressão.",
                             "E-commerce personalizado e sob medida. Desenvolido exclusivamente para a marca Lamûre, o Website possui como principal diferencial a personalização dos lenços pelo usuário.",
-                            "Metade blog, metade caderno de anotações. \"Diário de Bordo\" é um portal criado para registrar pensamentos e reflexões que permeiam a produção criativa durante a pandemia."];
+                           "Interface visual desenvolvida pra a concessionária Peugeot, pertencente ao Grupo Roma. Criado em parceria com a Agência Reweb, o site apresenta uma interface moderna e jovem, alinhada ao novo posicionamento de marca da Peugeot."];
         
-        var pLinks       = ["em-construcao.html",
+        var pLinks       = ["https://lucasjleismann.github.io/diario/index.html",
                             "em-construcao.html",
                             "em-construcao.html",
                             "em-construcao.html",
-                            "https://lucasjleismann.github.io/diario/index.html"];
+                            "em-construcao.html"];
         
         atualizarProjeto(-1);
         var pIntAnimProj = setInterval(function(){atualizarProjeto(-1);},7000);

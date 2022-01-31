@@ -715,23 +715,23 @@
     }
     
     #imgProjeto.p1 {
-        background-image: url(../img/home/proj_RomaPeugeot_Desktop.jpg);
+        background-image: url(../img/home/proj_Diario_Desktop.jpg);
     }
     
     #imgProjeto.p2 {
-        background-image: url(../img/home/proj_Zucatelli_Desktop.jpg);
+        background-image: url(../img/home/proj_RomaPeugeot_Desktop.jpg);
     }
     
     #imgProjeto.p3 {
-        background-image: url(../img/home/proj_Meteriopedia_Desktop.jpg);
+        background-image: url(../img/home/proj_Zucatelli_Desktop.jpg);
     }
     
     #imgProjeto.p4 {
-        background-image: url(../img/home/proj_Lamure_Desktop.jpg);
+        background-image: url(../img/home/proj_Meteriopedia_Desktop.jpg);
     }
     
     #imgProjeto.p5 {
-        background-image: url(../img/home/proj_Diario_Desktop.jpg);
+        background-image: url(../img/home/proj_Lamure_Desktop.jpg);
     }
     
     #barraProjetos {
@@ -859,6 +859,10 @@
     
     #Home .guia, #SobreMim .guia:nth-child(1), #SobreMim .guia:nth-child(2), #Home .texto {
         right: 112px;
+    }
+    
+    #SobreMim .guia:nth-child(1) {
+        top: -148px;
     }
     
     #Projetos .desktop .guia {
