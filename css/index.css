@@ -106,20 +106,6 @@
     background-color: #1F1F27;
 }
 
-.espacador {
-    position: relative;
-    width: 100%;
-    background-color: var(-corEscura1);
-}
-
-.espacador.h112{
-    height: 112px;
-}
-
-.espacador.h152{
-    height: 152px;
-}
-
 #SobreMim .conteudo {
     position: relative;
     width: calc(100% - (var(--margemLateral) * 2));
@@ -357,11 +343,12 @@
 #Contato .conteudo {
     position: absolute;
     width: calc(100% - (var(--margemLateral) * 2));
-    margin-left: var(--margemLateral);
     height: auto;
+    max-width: 400px;
     
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     
     font-family: "Report Regular";
     color: var(--corClara1);
@@ -434,4 +421,429 @@
     
     margin-top: 8px;
     opacity: 0.7;
+}
+
+.conteudo_desktop {
+    display: none;
+}
+
+#Home .texto {
+    display: none;
+}
+
+#Projetos .desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    #SobreMim .conteudo {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 635px) {
+    #Home .guia {
+        width: 2px;
+        height: 162px;
+        background-color: var(--corClara1);
+        position: absolute;
+        
+        bottom: 0;
+        right: var(--margemLateral);
+    }
+    
+    #SobreMim .guia:nth-child(1) {
+        width: 2px;
+        height: 90px;
+        background-color: var(--corBase2);
+        position: absolute;
+        
+        top: -112px;
+        right: var(--margemLateral);
+    }
+    
+    .elemento {
+        top: -512px;
+        right: -24px;
+
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #SobreMim .conteudo {
+        max-width: 400px;
+    }
+    
+    #Contato .conteudo {
+        display: none;
+    }
+
+    #container {
+        margin-bottom: 600px;
+    }
+    
+    #Contato {
+        width: 100%;
+        height: 600px;
+    }
+
+    #Contato .conteudo_desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 64px;
+        
+        position: absolute;
+        width: 800px;
+        height: auto;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: "Report Regular";
+        color: var(--corClara1);
+        margin-top: 12px;
+    }
+    
+    #Contato .conteudo_desktop .lado1{
+        width: 323px;
+    }
+
+    #Contato .conteudo_desktop .titulo {
+        position: relative;
+        width: auto;
+
+        color: var(--corClara1);
+        font-family: "Report Bold";
+        font-size: 56px;
+
+        margin-bottom: 36px;
+    }
+
+    #Contato .conteudo_desktop .item_contato {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #Contato .conteudo_desktop .item_contato {
+        margin-top: 18px;
+    }
+
+    #Contato .conteudo_desktop .item_contato .icone {
+        margin-right: 12px;
+        width: 26px;
+    }
+
+    #Contato .conteudo_desktop .item_contato .desc {
+        font-size: 24px;
+    }
+
+    #Contato .conteudo_desktop .item_contato .desc.bold {
+        font-family: "Report Bold";
+    }
+
+    #imgGato {
+        position: relative;
+        width: 400px;
+        height: 382px;
+        margin-left: 0px;
+        margin-top: 12px;
+
+        background-image: url(../img/home/img_gato.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #btPoliticaPriv {
+        position: relative;
+        width: 320px;
+        text-align: left;
+
+        font-size: 22px;
+        font-family: "Report Bold";
+
+        margin-top: 52px;
+    }
+
+    #lbTextoLegal {
+        position: relative;
+        width: 360px;
+        text-align: left;
+        font-size: 18px;
+        line-height: 20px;
+
+        margin-top: 8px;
+        opacity: 0.7;
+    }   
+}
+
+@media only screen and (min-width: 912px) {
+    #Home {
+        background-size: 174vh;
+    }
+    
+    #Home .texto {
+        display: block;
+        width: 242px;
+        height: 84px;
+        position: absolute;
+        
+        bottom: 172px;
+        right: var(--margemLateral);
+        
+        text-align: right;
+        color: var(--corClara1);
+        opacity: 0.7;
+        
+        font-family: "Report Regular";
+        font-size: 18px;
+        line-height: 18px;
+    }
+    
+    #imgPrisma {
+        z-index: 999;
+        animation: animPrisma 3s infinite normal ease-in-out none;
+        left: 49%;
+    }
+    
+    @keyframes animPrisma {
+        0% {
+            top: -6%;
+        }
+        50% {
+            top: -2%;
+        }
+        100% {
+            top: -6%;
+        }
+    }
+    
+    #SobreMim .conteudo {
+        margin-left: 118px;
+    }
+    
+    .elemento {
+        top: -512px;
+        right: 64px;
+
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    #SobreMim .guia:nth-child(2) {
+        width: 2px;
+        height: 168px;
+        background-color: var(--corBase2);
+        position: absolute;
+        
+        bottom: 0px;
+        right: var(--margemLateral);
+    }
+    
+    #Projetos .mobile {
+        display: none;
+    }
+    
+    #Projetos .desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        position: relative;
+        width: calc(100% - 118px);
+        height: auto;
+        padding-top: 112px;
+        padding-bottom: 112px;
+        
+        margin-left: 118px;
+        background-color: #1F1F27;
+        
+        column-gap: 24px;
+    }
+    
+    #Projetos .desktop .guia {
+        width: 2px;
+        height: 90px;
+        background-color: var(--corClara1);
+        position: absolute;
+        
+        top: -152px;
+        right: var(--margemLateral);
+    }
+    
+    #Projetos .desktop .lado1 {
+        width: 50%;
+        max-width: 585px;
+        height: auto;
+        position: relative;
+    }
+    
+    #Projetos .desktop .lado2 {
+        width: 50%;
+        max-width: 412px;
+        height: auto;
+        position: relative;
+    }
+    
+    #imgProjeto {
+        position: relative;
+        width: 100%;
+        height: 554px;
+        background-color: #363642;
+    }
+    
+    #barraProjetos {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 14px;
+        margin-top: 32px;
+    }
+    
+    #barraProjetos .selectProjeto {
+        width: 100%;
+        height: 5px;
+        background-color: #363642;
+        border-radius: 3px;
+        
+        cursor: pointer;
+        transition: 0.25s ease;
+        overflow: hidden;
+    }
+    
+    #barraProjetos .selectProjeto.select .progresso {
+        width: 0px;
+        height: 100%;
+        background-color: var(--corClara1);
+        animation: animProgresso 7s 1 normal linear forwards;
+    }
+    
+    @keyframes animProgresso {
+        0% {
+            opacity: 1;
+            width: 0px;
+        } 95% {
+            opacity: 1;
+            width: 100%;
+        } 100% {
+            opacity: 0;
+            width: 100%;
+        }
+    }
+    
+    @keyframes animChangeInfo {
+        0% {
+            opacity: 0;
+        } 5% {
+            opacity: 1;
+        } 95% {
+            opacity: 1;
+        } 100% {
+            opacity: 0;
+        }
+    }
+    
+    #nomeProjeto {
+        position: relative;
+        width: max-content;
+
+        color: var(--corClara1);
+        font-family: "Report Bold";
+        font-size: 56px;
+
+        margin-bottom: 32px;
+        margin-top: 56px;
+    }
+    
+    #nomeProjeto span{    
+        background-color: var(--corBase2);
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 8px;
+        padding-bottom: 6px;
+        
+        margin-left: 16px;
+        
+        border-radius: 24px;
+        font-size: 24px;
+    }
+    
+    #descProjeto {
+        position: relative;
+        width: 100%;
+        max-width: 412px;
+
+        color: var(--corClara2);
+        font-family: "Report regular";
+        font-size: 23px;
+        line-height: 28px;
+
+        margin-bottom: 48px;
+    }
+    
+    #Projetos .desktop .textoColorido {
+        position: absolute;
+        bottom: -24px;
+        width: 100%;
+
+        font-family: "Report Bold";
+        font-size: 24px;
+
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: 0.25s ease;
+    }
+
+    #Projetos .desktop .textoColorido:hover {
+        color: #6BACFF;
+    }
+    
+    .animTrocarProjeto {
+        animation: animChangeInfo 7s infinite normal linear forwards;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    #SobreMim .conteudo {
+        margin-top: 148px;
+        margin-bottom: 72px;
+        margin-left: 410px;
+    }
+    
+    #Home .guia, #SobreMim .guia:nth-child(1), #SobreMim .guia:nth-child(2), #Home .texto {
+        right: 112px;
+    }
+    
+    #Projetos .desktop .guia {
+        opacity: 0;
+    }
+        
+    #barraProjetos {
+        width: 70%;
+        margin-left: 15%;
+    }
+    
+    #Projetos .desktop {        
+        position: relative;
+        width: 1056px;
+        height: auto;
+        padding-top: 112px;
+        padding-bottom: 112px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #1F1F27;
+        
+        column-gap: 64px;
+    }
+
 }
