@@ -693,7 +693,30 @@
         position: relative;
         width: 100%;
         height: 554px;
-        background-color: #363642;
+        
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #imgProjeto.p1 {
+        background-image: url(../img/home/proj_RomaPeugeot_Desktop.jpg);
+    }
+    
+    #imgProjeto.p2 {
+        background-image: url(../img/home/proj_Zucatelli_Desktop.jpg);
+    }
+    
+    #imgProjeto.p3 {
+        background-image: url(../img/home/proj_Meteriopedia_Desktop.jpg);
+    }
+    
+    #imgProjeto.p4 {
+        background-image: url(../img/home/proj_Lamure_Desktop.jpg);
+    }
+    
+    #imgProjeto.p5 {
+        background-image: url(../img/home/proj_Diario_Desktop.jpg);
     }
     
     #barraProjetos {

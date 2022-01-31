@@ -223,7 +223,7 @@
                 <div class="desktop">
                     <div class="guia"></div>
                     <div class="lado1">
-                        <div id="imgProjeto"></div>
+                        <div id="imgProjeto" class="p1"></div>
                         <div id="barraProjetos">
                             <div class="selectProjeto p1" onclick="atualizarProjeto(1)"><div class="progresso"></div></div>
                             <div class="selectProjeto p2" onclick="atualizarProjeto(2)"><div class="progresso"></div></div>
@@ -392,11 +392,11 @@
                             "E-commerce<span>ui/ux</span><br>Lamûre",
                             "Diário<span>ui/ux</span><br>de Bordo"];
         
-        var pDescs       = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante.",
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante.",
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante.",
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante.",
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien lorem, posuere et lacus eget, ultricies sagittis risus. Donec aliquet, ligula in dictum interdum, velit ante egestas lorem, et congue quam eros eu ante."];
+        var pDescs       = ["Interface visual desenvolvida pra a concessionária Peugeot, pertencente ao Grupo Roma. Criado em parceria com a Agência Reweb, o site apresenta uma interface moderna e jovem, alinhada ao novo posicionamento de marca da Peugeot.",
+                            "Conjunto de artes desenvolvidas para a Landing Page do cliente Zucatelli Máquinas, apresentando os principais tratores e maquinários oferecidos pelo mesmo.",
+                            "Escrito e diagramado com base no conteúdo da disciplina de Materiais e Processos Gráficos, \"Materiopedia\" é um guia prático para designers, focado em apresentar as diferenças entre diferentes materiais e processos de impressão.",
+                            "E-commerce personalizado e sob medida. Desenvolido exclusivamente para a marca Lamûre, o Website possui como principal diferencial a personalização dos lenços pelo usuário.",
+                            "Metade blog, metade caderno de anotações. \"Diário de Bordo\" é um portal criado para registrar pensamentos e reflexões que permeiam a produção criativa durante a pandemia."];
         
         var pLinks       = ["/projetos/Roma-Peugeot.html",
                             "/projetos/Zucatelli-Maquinas.html",
@@ -440,6 +440,13 @@
                     $('.selectProjeto').removeClass("select");
                     $('.p'+vPosProjeto).addClass("select"); 
 
+                    $('#imgProjeto').removeClass("p1");
+                    $('#imgProjeto').removeClass("p2");
+                    $('#imgProjeto').removeClass("p3");
+                    $('#imgProjeto').removeClass("p4");
+                    $('#imgProjeto').removeClass("p5");
+                    $('#imgProjeto').addClass("p"+vPosProjeto); 
+                    
                     $('#nomeProjeto').html(pTitulos[vPosProjeto-1]);
                     $('#descProjeto').html(pDescs[vPosProjeto-1]);
                     pLinkAtual = pLinks[vPosProjeto-1];
