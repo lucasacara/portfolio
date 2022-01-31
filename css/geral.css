@@ -51,16 +51,6 @@ body{
     user-select: none;
 }
 
-#container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;    
-    margin-bottom: 100vh;
-    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.25);
-    background-color: var(--corEscura1);
-}
-
 a:any-link {
     text-decoration: none;
     color: var(--corClara1);

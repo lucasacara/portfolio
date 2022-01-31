@@ -1,5 +1,15 @@
 /* SEÇÃO 1 - Topo */
 
+#container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;    
+    margin-bottom: 100vh;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.25);
+    background-color: var(--corEscura1);
+}
+
 #Home {
     position: relative;
     width: 100%;
@@ -270,23 +280,28 @@
 }
 
 .card.c1 {
-    background-image: url(../img/home/proj_RomaPeugeot.png);
+    background-image: url(../img/home/proj_RomaPeugeot.jpg);
     color: var(--corClara1);
 }
 
 .card.c2 {
-    background-image: url(../img/home/proj_Zucatelli.png);
-    color: #0061DE;
+    background-image: url(../img/home/proj_Zucatelli.jpg);
+    color: var(--corClara1);
 }
 
 .card.c3 {
-    background-image: url(../img/home/proj_materiopedia.png);
-    color: #eb3c32;
+    background-image: url(../img/home/proj_materiopedia.jpg);
+    color: var(--corClara1);
 }
 
 .card.c4 {
-    background-image: url(../img/home/proj_Lamure.png);
-    color: #e12b72;
+    background-image: url(../img/home/proj_Lamure.jpg);
+    color: var(--corClara1);
+}
+
+.card.c5 {
+    background-image: url(../img/home/proj_Diario.jpg);
+    color: var(--corClara1);
 }
 
 .elemento {
