@@ -1,0 +1,245 @@
+.secao {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    --espaco: 112px;
+}
+
+.secao.clara {
+    background-color: #EDF2F6;
+    color: var(--corEscura1);
+}
+
+.secao.escura {
+    background-color: #1F1F27;
+    color: var(--corClara1);
+}
+
+.secao .espaco {    
+    position: relative;
+    width: 100%;
+    height: var(--espaco);
+}
+
+.secao .div {
+    position: relative;
+    width: 70%;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 2px;
+}
+
+.secao.clara .div {
+    background-color: #E2E9EF;
+}
+
+.secao.escura .div {
+    background-color: #3F3F4B;
+}
+
+/* --------- */
+/* TXT-IMG-1 */
+/* --------- */
+
+.secao .txt-img-1 {
+    position: relative;
+    
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.secao .txt-img-1 .imagem {
+    position: relative;
+    width: 100%;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    margin-bottom: var(--espaco);
+}
+
+.secao .txt-img-1 .imagem.pequena {
+    height: 124px;
+}
+
+.secao .txt-img-1 .imagem.media {
+    height: 364px;
+}
+
+.secao .txt-img-1 .imagem.grande {
+    height: 612px;
+}
+
+.secao .txt-img-1 .textos {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.secao .txt-img-1 .textos .titulo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    font-family: "Report Bold";
+    font-size: 32px;
+}
+
+.secao .txt-img-1 .textos p {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    font-family: "Report Regular";
+    font-size: 24px;
+    line-height: 32px;
+    
+    margin-top: 24px;
+}
+
+/* --------- */
+/* TXT-IMG-2 */
+/* --------- */
+
+.secao .txt-img-2 {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.secao .txt-img-2 .imagem {
+    position: relative;
+    width: 100%;
+    height: 458px;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.secao .txt-img-2 .textos {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+}
+
+.secao .txt-img-2 .textos p {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    font-family: "Report Regular";
+    font-size: 24px;
+    line-height: 32px;
+    
+    margin-top: 24px;
+}
+
+/* ---------- */
+/* IMG-TITULO */
+/* ---------- */
+
+.secao .img-titulo {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+}
+
+.secao .img-titulo .titulo {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    
+    font-family: "Report Regular";
+    font-size: 24px;
+    color: #6e6e7b;
+    margin-bottom: 24px;
+}
+
+.secao .img-titulo img {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+}
+
+/* ---------- */
+/* CARROSSEL */
+/* ---------- */
+
+.galeria {
+    position: relative;
+    
+    width: 100%;
+    height: 400px;
+    overflow-x: scroll;
+}
+
+.cont-galeria {
+    position: relative;
+    
+    height: 400px;
+    width: max-content;
+    
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    padding-left: var(--margemLateral);
+    padding-right: var(--margemLateral);
+}
+
+.cont-galeria .imagem {
+    width: 290px;
+    height: 290px;
+    
+    background-color: #ffffff;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+}
+
+.cont-galeria .imagem + .imagem {
+    margin-left: 20px;
+}
+
+
+.texto-help {
+    position: absolute;
+    
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: #373642;
+    width: 100%;
+    text-align: center;
+    
+    letter-spacing: 6px;
+    margin-top: -36px;
+    margin-bottom: 112px;
+}
+
+@media only screen and (min-width: 1360px) {
+    
+}

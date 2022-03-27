@@ -28,6 +28,7 @@ html {
     
     --corClara1: #F4FAFF;
     --corClara2: #B9C2CA;
+    --corClara3: #EDF1F6;
     
     --corBase1: #0074F3;
     --corBase2: #3589F8;
@@ -35,6 +36,8 @@ html {
     --corEscura1: #1F1F27;
     
     --margemLateral: 48px;
+    
+    --corCabecalho: #95BEF4;
 }
 
 body{
@@ -92,6 +95,10 @@ a:any-link {
     transition: 0.25s ease;
 }
 
+#btMenuMob svg path{
+    fill: var(--corCabecalho);
+}
+
 .flutuante #btMenuMob {
     margin-top: 2px;
 }
@@ -116,6 +123,12 @@ a:any-link {
     transform: translate(-50%, -50%);
     margin-top: 16px;
     transition: 0.25s ease;
+    
+    cursor: pointer;
+}
+
+#logoCabMob svg path{
+    fill: var(--corCabecalho);
 }
 
 .flutuante #logoCabMob {
@@ -308,13 +321,14 @@ a:any-link {
         font-size: 24px;
         column-gap: 52px;
         
-        color: var(--corClara1);
+        color: #FFF;
+        mix-blend-mode: difference;
     }
     
     #cabDesktop .pagina {
         position: relative;
-        opacity: 0.4;
-        cursor: pointer;
+        opacity: 1;
+        cursor: pointer;        
     }
     
     #cabDesktop .pagina .barra {
@@ -327,9 +341,9 @@ a:any-link {
         left: 50%;
         transform: translateX(-50%);
         
-        background-color: var(--corClara1);
+        background-color: #FFF;
         border-radius: 3px;
-        transition: 0.25s ease;
+        transition: 0.25s ease;        
     }
     
     #cabDesktop .pagina.selecionada {

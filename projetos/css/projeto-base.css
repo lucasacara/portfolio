@@ -1,0 +1,813 @@
+/* --------- */
+/*   INTRO   */
+/* --------- */
+
+/* SEÇÃO 1 - Topo */
+
+html {
+    --corCabecalho: #3589F8;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;    
+    margin-bottom: 0px;
+    background-color: var(--corEscura1);
+}
+
+
+#Intro {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    background-color: var(--corEscura1);
+}
+
+#Intro .img_fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 68vh;
+    
+    background-image: url(../../img/projetos/roma-peugeot/fundo-mob.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: ease 0.5s;
+}
+
+#Intro .cont_home {
+    position: relative;
+    width: 80%;
+    max-width: 512px;
+    height: auto;
+    margin-left: 10%;
+    
+    padding-top: 148px;
+    padding-bottom: 124px;
+}
+
+.proj_titulo {
+    color: var(--corClara1);
+    
+    font-family: "Report Bold";
+    font-size: 64px;
+    line-height: 72px;
+    margin-bottom: 36px;
+    margin-top: 48px;
+}
+
+.proj_categoria{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 137px;    
+    background-image: radial-gradient(circle at 100% 100%, transparent 7px, #3589f8 7px, #3589f8 9px, transparent 9px), linear-gradient(to right, #3589f8, #5ab7df), radial-gradient(circle at 0% 100%, transparent 7px, #5ab7df 7px, #5ab7df 9px, transparent 9px), linear-gradient(to bottom, #5ab7df, #97ffb8), radial-gradient(circle at 0% 0%, transparent 7px, #97ffb8 7px, #97ffb8 9px, transparent 9px), linear-gradient(to left, #97ffb8, #5ab7df), radial-gradient(circle at 100% 0%, transparent 7px, #5ab7df 7px, #5ab7df 9px, transparent 9px), linear-gradient(to top, #5ab7df, #3589f8);
+    background-size: 9px 9px, calc(100% - 18px) 2px, 9px 9px, 2px calc(100% - 18px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+}
+
+.proj_categoria .cont {
+    position: absolute;
+    width: auto;
+    height: auto;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.proj_categoria .icone {
+    position: relative;
+    width: 120px;
+    min-width: 120px;
+    height: 85px;
+    margin-top: 5px;
+    margin-left: -24px;
+    overflow: visible;
+}
+
+.proj_categoria .icone.ui {
+    background: url("../../img/projetos/ui.png") center/60% no-repeat, url("../../img/projetos/fundo_brilho.png") center/95% no-repeat;
+}
+
+.proj_categoria .cont .textos {
+    position: relative;
+    width: 162px;
+    height: auto;   
+    
+    color: var(--corClara1);
+}
+
+.proj_categoria .cont .textos .titulo {
+    background: #3589F8;
+    background: -webkit-linear-gradient(to right, #3589F8 0%, #97FFB8 60%);
+    background: -moz-linear-gradient(to right, #3589F8 0%, #97FFB8 60%);
+    background: linear-gradient(to right, #3589F8 0%, #97FFB8 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-family: "Report Bold";
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.proj_categoria .cont .textos .desc {
+    color: var(--corClara1);
+    font-family: "Report Regular";
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+
+#Intro .cont_home .descricao {
+    position: relative;
+    margin-top: 48px;
+}
+
+#Intro .cont_home p {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara3);
+    font-family: "Report Regular";
+    font-size: 23px;
+    line-height: 30px;
+    
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+#Intro .indic_rolagem {
+    opacity: 0;
+    transition: 3s ease-in-out opacity;
+}
+
+/* --------- */
+/*   SECAO   */
+/* --------- */
+
+.secao {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    --espaco: 112px;
+}
+
+.secao.clara {
+    background-color: #EDF2F6;
+    color: var(--corEscura1);
+}
+
+.secao.escura {
+    background-color: #1F1F27;
+    color: var(--corClara1);
+}
+
+.secao .espaco {    
+    position: relative;
+    width: 100%;
+    height: var(--espaco);
+}
+
+.secao .meio-espaco {    
+    position: relative;
+    width: 100%;
+    height: calc(var(--espaco) / 2);
+}
+
+.secao .div {
+    position: relative;
+    width: 70%;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 2px;
+}
+
+.secao.clara .div {
+    background-color: #E2E9EF;
+}
+
+.secao.escura .div {
+    background-color: #3F3F4B;
+}
+
+/* -------------- */
+/*   CONT-2-COL   */
+/* -------------- */
+
+.cont-2-col {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    grid-gap: 48px;
+}
+
+.cont-2-col.mob-invert {
+    flex-direction: column-reverse;
+}
+
+.cont-2-col .titulo {
+    position: relative;
+    font-family: "Report Bold";
+    font-size: 32px;
+}
+
+.cont-2-col p {
+    position: relative;
+    font-family: "Report Regular";
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.cont-2-col img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ------------ */
+/*   CONT-IMG   */
+/* ------------ */
+
+.cont-img {
+    position: relative;
+    height: auto;
+}
+
+.cont-img.center {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.cont-img.full {
+    width: 100%;
+}
+
+.cont-img .desktop {
+    display: none;
+}
+
+/* ------------------ */
+/*   CONT-TEXTO-COL   */
+/* ------------------ */
+
+.cont-texto-col {
+    width: 80%;
+    margin-left: 10%;
+    
+    position: relative;
+    font-family: "Report Regular";
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* ---------------- */
+/*   CONT-GALERIA   */
+/* ---------------- */
+
+.cont-galeria .desktop {
+    display: none;
+}
+
+.cont-galeria .mobile {
+    display: block;
+    
+    position: relative;
+    
+    width: 100%;
+    height: 648px;
+    overflow-x: scroll;
+}
+
+.cont-galeria .cont-interno {
+    position: relative;
+    
+    height: 612px;
+    width: max-content;
+    
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    padding-left: var(--margemLateral);
+    padding-right: var(--margemLateral);
+}
+
+.cont-galeria .cont-interno .imagem {
+    width: 320px;
+    height: 524px;
+    
+    background-color: #ffffff;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+}
+
+.cont-galeria .cont-interno .imagem + .imagem {
+    margin-left: 20px;
+}
+
+
+.cont-galeria .texto-help {
+    position: absolute;
+    
+    font-family: "Report Regular";
+    font-size: 18px;    
+    color: #373642;
+    width: 100%;
+    text-align: center;
+    
+    letter-spacing: 6px;
+    margin-top: -36px;
+    margin-bottom: 112px;
+}
+
+/* ---------- */
+/*   RODAPE   */
+/* ---------- */
+
+.rodape {
+    position: relative;
+    width: 100%;
+    height: 100vh;    
+    background-color: var(--corBase1);
+}
+
+.rodape .cont-rodape {
+    position: absolute;
+    width: calc(100% - (var(--margemLateral) * 2));
+    height: auto;
+    max-width: 400px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-family: "Report Regular";
+    color: var(--corClara1);
+}
+
+.rodape .cont-rodape .titulo {
+    position: relative;
+    width: 100%;
+    
+    color: var(--corClara1);
+    font-family: "Report Bold";
+    font-size: 56px;
+    
+    margin-bottom: 36px;
+}
+
+.rodape .cont-rodape .descricao {
+    position: relative;
+    width: 100%;
+    
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: -12px;
+    margin-bottom: 32px;
+}
+
+.rodape .cont-rodape .priv {
+    position: relative;
+    width: 100%;
+    
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: -12px;position: relative;
+    width: 100%;
+    
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 32px;
+    
+    color: var(--corClara1);
+    opacity: 0.5;
+}
+
+@media only screen and (min-width: 648px) {
+    #Intro .img_fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 68vh;
+
+        background-image: url(../../img/projetos/roma-peugeot/fundo-desk.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: ease 0.5s;
+    }
+    
+    /* -------------- */
+    /*   CONT-2-COL   */
+    /* -------------- */
+
+    .cont-2-col {
+        width: 548px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cont-2-col.mob-invert {
+        flex-direction: column-reverse;
+    }
+
+    .cont-2-col p {
+        position: relative;
+        font-family: "Report Regular";
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .cont-2-col img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* ------------ */
+    /*   CONT-IMG   */
+    /* ------------ */
+
+    .cont-img.center {
+        width: 548px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ------------------ */
+    /*   CONT-TEXTO-COL   */
+    /* ------------------ */
+
+    .cont-texto-col {
+        width: 548px;
+        margin-left: auto;
+        margin-right: auto;
+
+        position: relative;
+        font-family: "Report Regular";
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+}
+
+@media only screen and (min-width: 912px) {
+    #Intro .cont_home {
+        position: relative;
+        width: 492px;
+        max-width: none;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        left: -100px;
+        
+        top: 64px;
+        
+    }  
+    
+    .proj_categoria{
+        position: absolute;
+        width: 192px;
+        max-width: none;
+        height: 348px;  
+        
+        right: -248px;
+        top: 208px;
+    }
+    
+    .proj_categoria .cont {
+        flex-direction: column;
+    }
+
+    .proj_categoria .icone {
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0px;
+        
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #Intro .cont_home .descricao p {
+        font-size: 21px;
+    }
+    
+    .proj_categoria .cont .textos {
+        width: 136px;
+    }
+
+    .proj_categoria .cont .textos .titulo {
+        text-align: center;
+        margin-top: 32px;
+    }
+
+    .proj_categoria .cont .textos .desc {
+        margin-top: 12px;
+        text-align: center;
+    }
+    
+    #Intro .indic_rolagem {
+        position: relative;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 84px;
+        
+        width: 400px;
+        height: 100px;
+    }
+    
+    #Intro .indic_rolagem .texto {
+        position: relative;
+        width: 100%;
+        
+        font-family: "Report Regular";
+        font-size: 18px;
+        color: #F2EDF6;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    
+    #Intro .indic_rolagem .mouse {
+        position: relative;
+        width: 32px;
+        height: 54px;
+        
+        border-width: 3px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        border-radius: 18px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 18px;
+        margin-bottom: -112px;
+    }
+    
+    #Intro .indic_rolagem .mouse .rolagem {
+        position: relative;
+        width: 4px;
+        height: 10px;
+        
+        background-color: #FFFFFF;
+        border-radius: 2px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px;
+        opacity: 1;
+        
+        animation: rolagem 1.5s ease-in-out 0s infinite;
+    }
+    
+    @keyframes rolagem {
+        0% {
+            opacity: 0;
+            margin-top: 12px;
+            height: 10px;
+        }
+        20% {
+            opacity: 1;
+        }
+        25{
+            height: 10px;
+        }
+        70% {
+            opacity: 0.0;
+            margin-top: 42px;
+            height: 6px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: 42px;
+            height: 4px;
+        }
+        100% {
+            opacity: 0;
+            margin-top: 42px;
+            height: 4px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1020px) {  
+    /* ---------------- */
+    /*   CONT-GALERIA   */
+    /* ---------------- */
+
+    .cont-galeria .mobile {
+        display: none;
+    }
+
+    .cont-galeria .desktop {
+        display: block;
+        position: relative;
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        grid-gap: 24px;
+        flex-direction: row;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1268px) {     
+    #Intro .cont_home {
+        position: relative;
+        width: 812px;
+        padding-top: 164px;
+    }  
+    
+    #Intro .cont_home .descricao {
+        display: flex;
+        column-gap: 48px;
+        margin-top: -24px;
+    }
+    
+    .proj_categoria{
+        height: 278px;  
+    }
+    
+    /* -------------- */
+    /*   CONT-2-COL   */
+    /* -------------- */
+
+    .cont-2-col {
+        position: relative;
+        width: 1024px;       
+        flex-direction: row;
+        grid-gap: unset;
+        margin-right: unset;
+        margin-left: unset;
+        
+        transform: unset;
+        left: unset;
+        right: unset;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cont-2-col.mob-invert {
+        flex-direction: row;
+    }
+    
+    .cont-2-col .col {
+        position: relative;
+        width: max-content;
+    }
+    
+    .cont-2-col .col:nth-child(2) {
+        margin-left: 128px;
+    }
+
+    .cont-2-col p {
+        position: relative;
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 368px;
+    }
+    
+    .cont-2-col .titulo {
+        font-size: 24px;
+    }
+
+    .cont-2-col img {
+        position: relative;
+        left: unset;
+        transform: unset;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /* ------------ */
+    /*   CONT-IMG   */
+    /* ------------ */
+
+    .cont-img.center {
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .cont-img .mobile {
+        display: none;
+    }
+    
+    .cont-img .desktop {
+        display: block;
+    }
+
+    /* ------------------ */
+    /*   CONT-TEXTO-COL   */
+    /* ------------------ */
+
+    .cont-texto-col {
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+
+        position: relative;
+        font-family: "Report Regular";
+        font-size: 18px;
+        line-height: 24px;
+        
+        display: flex;
+        grid-gap: 112px;
+    }
+    
+    /* ---------- */
+    /*   RODAPE   */
+    /* ---------- */
+
+    .rodape {
+        height: 600px;    
+    }
+
+    .rodape .cont-rodape {
+        position: absolute;
+        width: calc(100% - (var(--margemLateral) * 2));
+        max-width: 1024px;
+        
+        display: flex;
+        column-gap: 48px;
+        align-items: flex-end;
+    }
+
+    .rodape .cont-rodape .titulo {
+        position: relative;
+        width: 100%;
+
+        color: var(--corClara1);
+        font-family: "Report Bold";
+        font-size: 56px;
+
+        margin-bottom: 36px;
+    }
+
+    .rodape .cont-rodape .descricao {
+        position: relative;
+        width: 100%;
+
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: -12px;
+        margin-bottom: 32px;
+    }
+
+    .rodape .cont-rodape .priv {
+        position: relative;
+        width: 100%;
+
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: -12px;position: relative;
+        width: 100%;
+
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 32px;
+
+        color: var(--corClara1);
+        opacity: 0.5;
+    }
+}
