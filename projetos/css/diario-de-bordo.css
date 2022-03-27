@@ -1,5 +1,7 @@
 * {
     --corProjeto: #C39A17;
+    --corCabecalho: #997400;
+    --corBase1: var(--corProjeto);
 }
 
 #Intro .img_fundo {

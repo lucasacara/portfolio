@@ -214,6 +214,19 @@ html {
     font-weight: 100;
 }
 
+.secao.clara .botaoContorno {
+    border-color: var(--corEscura1);
+    color: var(--corEscura1);
+}
+
+.secao.clara .botaoContorno:hover {
+    background-color: var(--corEscura1);
+}
+
+.secao.clara .botaoContorno:hover .texto {
+    color: var(--corClara1);
+}
+
 /* -------------- */
 /*   CONT-2-COL   */
 /* -------------- */
@@ -698,6 +711,7 @@ html {
         width: 1024px;       
         flex-direction: row;
         grid-gap: unset;
+        column-gap: 124px;
         
         transform: unset;
         left: unset;
@@ -711,20 +725,30 @@ html {
         flex-direction: row;
     }
     
+    .cont-2-col.vert-center {
+        align-items: center;
+    }
+    
+    .cont-2-col .col.recuo {
+        --recuo: 52px;
+        margin-top: var(--recuo);
+        margin-bottom: calc(- var(--recuo));
+    }
+    
     .cont-2-col .col {
         position: relative;
         width: max-content;
     }
     
-    .cont-2-col .col:nth-child(2) {
-        margin-left: 128px;
+    .cont-2-col .col.center {
+        width: 100%;
+        margin-left: 0px;
     }
 
     .cont-2-col p {
         position: relative;
         font-size: 19px;
         line-height: 26px;
-        max-width: 368px;
     }
     
     .cont-2-col .titulo {
