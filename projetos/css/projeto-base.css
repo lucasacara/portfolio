@@ -207,6 +207,14 @@ html {
     background-color: #3F3F4B;
 }
 
+.secao strong {
+    background-color: var(--corBase1);
+    color: var(--corClara1);
+    
+    padding: 8px 8px 4px 8px;
+    font-weight: 100;
+}
+
 /* -------------- */
 /*   CONT-2-COL   */
 /* -------------- */
@@ -245,6 +253,14 @@ html {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.cont-2-col .desktop {
+    display: none;
+}
+
+.cont-2-col .mobile {
+    display: block;
 }
 
 /* ------------ */
@@ -676,15 +692,13 @@ html {
         width: 1024px;       
         flex-direction: row;
         grid-gap: unset;
-        margin-right: unset;
-        margin-left: unset;
         
         transform: unset;
         left: unset;
         right: unset;
         
         margin-left: auto;
-        margin-right: auto;
+        height: min-content;
     }
 
     .cont-2-col.mob-invert {
@@ -702,22 +716,35 @@ html {
 
     .cont-2-col p {
         position: relative;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 19px;
+        line-height: 26px;
         max-width: 368px;
     }
     
     .cont-2-col .titulo {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .cont-2-col img {
         position: relative;
+
         left: unset;
         transform: unset;
         top: 50%;
         transform: translateY(-50%);
     }
+    
+    .cont-2-col .mobile {
+        display: none;
+    }
+    
+    .cont-2-col .desktop {
+        position: relative;    
+        margin-top: 192px;
+        margin-bottom: -212px;
+        display: block;
+    }
+    
     
     /* ------------ */
     /*   CONT-IMG   */
