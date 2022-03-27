@@ -220,7 +220,8 @@ html {
 }
 
 .secao.clara .botaoContorno:hover {
-    background-color: var(--corEscura1);
+    background-color: var(--corProjeto);
+    border-color: var(--corProjeto);
 }
 
 .secao.clara .botaoContorno:hover .texto {
