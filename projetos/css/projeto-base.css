@@ -207,7 +207,7 @@ html {
 }
 
 .secao strong {
-    background-color: var(--corBase1);
+    background-color: var(--corProjeto);
     color: var(--corClara1);
     
     padding: 8px 8px 4px 8px;
@@ -380,7 +380,7 @@ html {
     position: relative;
     width: 100%;
     height: 100vh;    
-    background-color: var(--corBase1);
+    background-color: var(--corProjeto);
 }
 
 .rodape .cont-rodape {
@@ -622,23 +622,27 @@ html {
         }
         20% {
             opacity: 1;
-        }
-        25{
+            margin-top: 12px;
             height: 10px;
         }
-        70% {
-            opacity: 0.0;
-            margin-top: 42px;
-            height: 6px;
+        40%{
+            opacity: 1;
+            margin-top: 12px;
+            height: 10px;
         }
         80% {
+            opacity: 0.0;
+            margin-top: 38px;
+            height: 6px;
+        }
+        95% {
             opacity: 0;
-            margin-top: 42px;
+            margin-top: 38px;
             height: 4px;
         }
         100% {
             opacity: 0;
-            margin-top: 42px;
+            margin-top: 38px;
             height: 4px;
         }
     }

@@ -1,3 +1,7 @@
+* {
+    --corProjeto: #0074F3;
+}
+
 #Intro .img_fundo {
     background-image: url(../../img/projetos/roma-peugeot/fundo-mob.png);
 }
