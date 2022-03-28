@@ -1,0 +1,15 @@
+* {
+    --corProjeto: #1887D6;
+    --corCabecalho: #1887D6;
+    --corBase1: var(--corProjeto);
+}
+
+#Intro .img_fundo {
+    background-image: url(../../img/projetos/zucatelli/capa-desktop.png);
+}
+
+@media only screen and (min-width: 648px) {
+    #Intro .img_fundo {
+        background-image: url(../../img/projetos/zucatelli/capa-desktop.png);
+    }
+}

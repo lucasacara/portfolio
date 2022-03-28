@@ -228,6 +228,23 @@ html {
     color: var(--corClara1);
 }
 
+.legenda {    
+    position: relative;
+    width: 100%;
+    
+    font-family: "Report Regular";
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    
+    opacity: 0.6;
+    margin-top: 12px;   
+}
+
+.sombra {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* -------------- */
 /*   CONT-2-COL   */
 /* -------------- */
