@@ -1,0 +1,15 @@
+* {
+    --corProjeto: #C39A17;
+    --corCabecalho: #997400;
+    --corBase1: var(--corProjeto);
+}
+
+#Intro .img_fundo {
+    background-image: url(../../img/projetos/diario-de-bordo/capa-desktop.png);
+}
+
+@media only screen and (min-width: 648px) {
+    #Intro .img_fundo {
+        background-image: url(../../img/projetos/diario-de-bordo/capa-desktop.png);
+    }
+}
