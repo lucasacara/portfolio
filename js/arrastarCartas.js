@@ -29,10 +29,11 @@ DRAG_ELEMENTS.forEach(dragElem => {
         CONTAINER.classList.remove('dragging')
         isDragging = false
 
-        let randomAngle = -10 + (Math.random() * 30);
+        /* let randomAngle = -10 + (Math.random() * 30);
         Object.assign(dragElem.style, {
             transform: `rotate(${randomAngle}deg)`
-        })
+        }) */
+        
     })
 
 })

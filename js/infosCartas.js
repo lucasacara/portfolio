@@ -1,11 +1,14 @@
 function criarCarta(carta, pos) {
-    var vHTML = "<div class='carta' style='background-image: url("+carta.img+")' onClick='clickCarta("+pos+")'></div>"
+    var vHTML = "<div class='carta' id='c"+pos+"' style='background-image: url("+carta.img+")' onClick='clickCarta("+pos+")'></div>"
     return vHTML
 }
 
 function clickCarta(posVetor) {
     if (!vArrastando) {
-        console.log(vBaralho[posVetor].titulo)
+        var cartaSelect = document.getElementById("c"+posVetor);
+
+
+        console.log("Foi");
     } else {
         vArrastando = false;
     }
