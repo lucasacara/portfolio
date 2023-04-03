@@ -18,6 +18,8 @@
     font-weight: bold;
     font-style: normal;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
   
   html {
       margin: 0;
@@ -65,9 +67,9 @@
 
   position: absolute;
 
-  left: 120px;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   background-color: #fffbe7;
   border-style: dashed;
@@ -129,4 +131,41 @@
   box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
   margin-top: -8px;
   transition: linear 0.05s;
+}
+
+.carta .titulo {
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  height: 0;
+  width: max-content;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "Kanit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+[data-naipe="azul"] .titulo {
+  border-bottom: 24px solid #3C8AFF;
+  color: #FFFFFF;
+}
+
+[data-naipe="verde"] .titulo {
+  border-bottom: 24px solid #39D82B;
+  color: #FFFFFF;
+}
+
+[data-naipe="amarelo"] .titulo {
+  border-bottom: 24px solid #FFDB1C;
+  color: #000000;
+}
+
+[data-naipe="vermelho"] .titulo {
+  border-bottom: 24px solid #FF6A56;
+  color: #FFFFFF;
 }
