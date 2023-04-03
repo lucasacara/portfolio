@@ -15,7 +15,6 @@ function criarCarta(carta, pos) {
 function clickCarta(posVetor) {
     if (!vArrastando) {
         var cartaSelect = document.getElementById("c"+posVetor);
-        console.log("Foi");
     } else {
         vArrastando = false;
     }
