@@ -28,7 +28,7 @@
       height: 100%;
       overflow: auto;
       
-      --corFundo: #ffffff;
+      --corFundo: #424242;
       --wCarta: 224px;
       --hCarta: 350px;
   }
@@ -100,7 +100,7 @@
   width: var(--wCarta);
   height: var(--hCarta);
 
-  background-color: #f7c029;
+  background-color: #fffbf1;
   border-radius: 8px;
   cursor: grab;
 
