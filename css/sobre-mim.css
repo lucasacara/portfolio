@@ -28,7 +28,7 @@
       height: 100%;
       overflow: auto;
       
-      --corFundo: #424242;
+      --corFundo: #f0f0f0;
       --wCarta: 224px;
       --hCarta: 350px;
   }
@@ -71,7 +71,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: #fffbe7;
+  background-color: #beae5a;
   border-style: dashed;
   border-width: 2px;
   border-color: #e7e1c0;
@@ -80,6 +80,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+  transition: ease-in-out .3s;
 }
 
 .msgDefault {
