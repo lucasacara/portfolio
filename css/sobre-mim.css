@@ -71,7 +71,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: #beae5a;
+  /*background-color: #beae5a;*/
   border-style: dashed;
   border-width: 2px;
   border-color: #e7e1c0;
