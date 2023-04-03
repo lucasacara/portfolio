@@ -1,15 +1,15 @@
-var DRAG_ELEMENTS = document.querySelectorAll('.carta')
-var CONTAINER = document.querySelector('.container') //@TODO: make container (stack) draggie
+var DRAG_ELEMENTS = document.querySelectorAll('.carta');
+var CONTAINER = document.querySelector('.container');
 
-let highestIndex = 1
-let draggies = []
-let dropElem = null
-let isDragging = false
+let highestIndex = 1;
+let draggies = [];
+let dropElem = null;
+let isDragging = false;
 
 DRAG_ELEMENTS.forEach(dragElem => {
     const DRAGGIE = new Draggabilly(dragElem, {
-        containment: CONTAINER
-    })
+        containment: CONTAINER,
+    });
 
     draggies.push(DRAGGIE);
 
@@ -22,19 +22,33 @@ DRAG_ELEMENTS.forEach(dragElem => {
         isDragging = true
         highestIndex ++
 
-    })
+    });
 
     DRAGGIE.on('dragEnd', event => {
-        dragElem.classList.remove('dragging')
-        CONTAINER.classList.remove('dragging')
-        isDragging = false
+        dragElem.classList.remove('dragging');
+        CONTAINER.classList.remove('dragging');
+        isDragging = false;
 
-        /* let randomAngle = -10 + (Math.random() * 30);
-        Object.assign(dragElem.style, {
-            transform: `rotate(${randomAngle}deg)`
-        }) */
-        
-    })
+        let randomAngle = -10 + (Math.random() * 30);
+        girarCarta(randomAngle, dragElem);
+    });
 
-})
+});
 
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+async function girarCarta(angulo, elem) {
+    if (angulo >= 0) {
+        for(let x=1; x <= angulo; x++) {
+            elem.style.transform = "rotate("+x+"deg)";
+            await delay(10);
+        }   
+    } else {
+        for(let x=0; x >= angulo; x--) {
+            elem.style.transform = "rotate("+x+"deg)";
+            await delay(10);
+        }
+    }
+}

@@ -111,6 +111,7 @@ function organizarCartas() {
         lCartas[x].style.height = HN_CARTA+"px";
         lCartas[x].style.width  = WN_CARTA+"px";
         lCartas[x].style.borderRadius  = "0px";
+        lCartas[x].style.transform  = "rotate(0deg)";
     }
 
     //Oculta os títulos das cartas
