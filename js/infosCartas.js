@@ -52,8 +52,24 @@ function recomecarCartas() {
         DRAG_ELEMENTS[x].style.transition = "ease-in-out .5s";
         DRAG_ELEMENTS[x].style.top = "0px";
         DRAG_ELEMENTS[x].style.left = "0px";
+        DRAG_ELEMENTS[x].style.height = "350px";
+        DRAG_ELEMENTS[x].style.width = "224px";
         DRAG_ELEMENTS[x].style.transform = "rotate(0deg)";
+        DRAG_ELEMENTS[x].style.borderRadius = "8px";
+    } 
+
+    //Oculta os títulos das cartas
+    var lTitulosCartas = document.getElementsByClassName("titulo");
+    for (let x = 0; x < lTitulosCartas.length; x++) {
+        lTitulosCartas[x].style.opacity = "1";
     }
+
+    //Centraliza na tela
+    var contBaralho = document.getElementById("contBaralho");
+    contBaralho.style.backgroundColor = "transparent";
+    contBaralho.style.borderColor = "#d6d6d6";
+    contBaralho.style.height = "350px";
+    contBaralho.style.width = "224px";
 
     setTimeout(function(){
         for (let x=0; x<DRAG_ELEMENTS.length; x++) {
@@ -119,8 +135,13 @@ console.log(vBaralho);
 var contBaralho = document.getElementById("contBaralho");
 
 var vHTMLDefault = document.createElement("div");
-vHTMLDefault.innerHTML = "Organize";
-vHTMLDefault.className = "msgDefault";
+vHTMLDefault.innerHTML = `<div class="imagem">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0989 2.7995L15.1889 9.0595L22.0989 10.0695L17.0989 14.9395L18.2789 21.8195L12.0989 18.5695L5.91894 21.8195L7.09894 14.9395L2.09894 10.0695L9.00894 9.0595L12.0989 2.7995Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                        
+                            </div>
+                          <div class="texto">Organizar</div>`;
+vHTMLDefault.className = "botao pCenter";
 vHTMLDefault.addEventListener("click", organizarCartas);
 
 contBaralho.innerHTML = vBaralho.map((carta, pos) => criarCarta(carta, pos)).join("");
