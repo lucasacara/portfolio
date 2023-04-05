@@ -75,7 +75,7 @@
   border-style: solid;
   border-width: 2px;
   border-color: #d6d6d6;
-  border-radius: 8px;
+  border-radius: 21px;
 
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -107,8 +107,8 @@
   width: var(--wCarta);
   height: var(--hCarta);
 
-  background-color: #fffbf1;
-  border-radius: 8px;
+  /* background-color: #fffbf1; */
+  border-radius: 21px;
   cursor: grab;
 
   /* top: 400px; */
@@ -124,10 +124,40 @@
   /* animation: animCartaSurgir 0.5s 9.5s forwards; */
 }
 
+.borda {
+  position: absolute;
+  width: var(--wCarta);
+  height: var(--hCarta);
+
+  border-radius: 21px;
+
+  top: 0;
+  left: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  user-select: none;
+  touch-action: none;
+
+  border-width: 2px;
+  border-style: solid;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  opacity: 0;
+}
+
 .carta:hover {
   cursor: grab;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
   margin-top: -2px;
+}
+
+.carta:hover .borda {
+  opacity: 1;
 }
 
 .carta.is-dragging {
@@ -179,6 +209,22 @@
 [data-naipe="vermelho"] .titulo {
   border-bottom: 24px solid #FF6A56;
   color: #FFFFFF;
+}
+
+[data-naipe="azul"] .borda {
+  border-color: #3C8AFF;
+}
+
+[data-naipe="verde"] .borda {
+  border-color: #39D82B;
+}
+
+[data-naipe="amarelo"] .borda {
+  border-color: #FFDB1C;
+}
+
+[data-naipe="vermelho"] .borda {
+  border-color: #FF6A56;
 }
 
 #contInicio {
@@ -343,11 +389,11 @@
   background-size: cover;
   background-position: center;
 
-  border-style: solid;
+  /* border-style: solid;
   border-width: 2px 2px 4px 2px;
-  border-color: #000000;
+  border-color: #000000; */
   color: #000000;
-  border-radius: 8px;
+  border-radius: 21px;
 }
 
 #tituloCartaSelect {

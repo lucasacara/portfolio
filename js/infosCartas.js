@@ -3,8 +3,9 @@ function criarCarta(carta, pos) {
                      id="c`+pos+`"
                      data-naipe="`+carta.naipe+`"
                      data-numero="`+carta.numero+`"
-                     style="background-image: url(img/sobre-mim/carta-`+(carta.numero)+`.jpg)"
+                     style="background-image: url(`+(carta.img)+`)"
                      onClick="clickCarta(`+pos+`)">
+                     <div class="borda"></div>
                      <div class="titulo">
                         `+carta.titulo+`
                      </div>
@@ -16,7 +17,7 @@ function clickCarta(posVetor) {
     if (!vArrastando) {
         var cartaSelect = document.getElementById("c"+posVetor);
 
-        document.getElementById("imgCartaSelect").style.backgroundImage = "url('img/sobre-mim/carta-"+vBaralho[posVetor].numero+".jpg')";
+        document.getElementById("imgCartaSelect").style.backgroundImage = "url('"+vBaralho[posVetor].img+"')";
         document.getElementById("tituloCartaSelect").innerHTML = vBaralho[posVetor].titulo;
 
         if (vBaralho[posVetor].naipe == "azul") {
@@ -47,6 +48,7 @@ function clickCarta(posVetor) {
 
 function recomecarCartas() {
     var DRAG_ELEMENTS = document.querySelectorAll('.carta');
+    var vBordas = document.querySelectorAll('.borda');
 
     for (let x=0; x<DRAG_ELEMENTS.length; x++) {
         DRAG_ELEMENTS[x].style.transition = "ease-in-out .5s";
@@ -55,7 +57,7 @@ function recomecarCartas() {
         DRAG_ELEMENTS[x].style.height = "350px";
         DRAG_ELEMENTS[x].style.width = "224px";
         DRAG_ELEMENTS[x].style.transform = "rotate(0deg)";
-        DRAG_ELEMENTS[x].style.borderRadius = "8px";
+        DRAG_ELEMENTS[x].style.borderRadius = "21px";
     } 
 
     //Oculta os títulos das cartas
@@ -70,6 +72,11 @@ function recomecarCartas() {
     contBaralho.style.borderColor = "#d6d6d6";
     contBaralho.style.height = "350px";
     contBaralho.style.width = "224px";
+
+    //Retorna as bordas
+    for (let x = 0; x < vBordas.length; x++) {
+        vBordas[x].style.display = "block";
+    }
 
     setTimeout(function(){
         for (let x=0; x<DRAG_ELEMENTS.length; x++) {
@@ -86,46 +93,46 @@ var vBaralho = []
 var vArrastando = false
 
 vBaralho.push(
-    {numero: "1", titulo: "Minas Gerais", naipe: "verde", descricao: "Sem descrição."},
-    {numero: "2", titulo: "TDAH", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-2.jpg"},
-    {numero: "3", titulo: "IFSul", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-3.jpg"},
-    {numero: "4", titulo: "Laura", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-4.jpg"},
-    {numero: "5", titulo: "Mãe e Pai", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-4.jpg"},
-    {numero: "6", titulo: "Linha Grão-Pará", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-5.jpg"},
-    {numero: "7", titulo: "Riveira", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-6.jpg"},
-    {numero: "8", titulo: "Filmes preferidos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "9", titulo: "AP Porto Alegre", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-7.jpg"},
-    {numero: "10", titulo: "Perto e longe", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-8.jpg"},
-    {numero: "11", titulo: "Violão", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-9.jpg"},
-    {numero: "12", titulo: "UI/UX", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-10.jpg"},
-    {numero: "13", titulo: "Programação", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-11.jpg"},
-    {numero: "14", titulo: "Design", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-12.jpg"},
-    {numero: "15", titulo: "ESPM", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-13.jpg"},
-    {numero: "16", titulo: "Muda-te!", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-14.jpg"},
-    {numero: "17", titulo: "Educação Social", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-15.jpg"},
-    {numero: "18", titulo: "Tarot", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-16.jpg"},
-    {numero: "19", titulo: "Gamificação", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-17.jpg"},
-    {numero: "20", titulo: "Cafeterias", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-18.jpg"},
-    {numero: "21", titulo: "Palanque", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-19.jpg"},
-    {numero: "22", titulo: "Músicas e Estilos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-20.jpg"},
-    {numero: "23", titulo: "Pepino", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-21.jpg"},
-    {numero: "24", titulo: "Curitiba", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-22.jpg"},
-    {numero: "25", titulo: "LGBT", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-23.jpg"},
-    {numero: "26", titulo: "Meu 1º AP", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-24.jpg"},
-    {numero: "27", titulo: "Plantas", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-25.jpg"},
-    {numero: "28", titulo: "Batata Palha", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-26.jpg"},
-    {numero: "29", titulo: "São Paulo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-27.jpg"},
-    {numero: "30", titulo: "Prêmios", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-28.jpg"},
-    {numero: "31", titulo: "São Jerônimo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-29.jpg"},
-    {numero: "32", titulo: "Surrealismo", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "33", titulo: "Jogos favoritos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "34", titulo: "IFantasy", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "35", titulo: "Ilustração", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "36", titulo: "Empresas", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "37", titulo: "CTG Coxilha Verde", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "38", titulo: "Cabelo colorido", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "39", titulo: "Alê", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
-    {numero: "40", titulo: "Hiperfoco", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.jpg"},
+    {numero: "1", titulo: "Minas Gerais", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.png"},
+    {numero: "2", titulo: "TDAH", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-2.png"},
+    {numero: "3", titulo: "IFSul", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-3.png"},
+    {numero: "4", titulo: "Laura", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-4.png"},
+    {numero: "5", titulo: "Mãe e Pai", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-5.png"},
+    {numero: "6", titulo: "Linha Grão-Pará", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-6.png"},
+    {numero: "7", titulo: "Riveira", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-7.png"},
+    {numero: "8", titulo: "Filmes preferidos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-8.png"},
+    {numero: "9", titulo: "AP Porto Alegre", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-9.png"},
+    {numero: "10", titulo: "Perto e longe", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-10.png"},
+    {numero: "11", titulo: "Violão", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-11.png"},
+    {numero: "12", titulo: "UI/UX", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-12.png"},
+    {numero: "13", titulo: "Programação", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-13.png"},
+    {numero: "14", titulo: "Design", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-14.png"},
+    {numero: "15", titulo: "ESPM", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-15.png"},
+    {numero: "16", titulo: "Muda-te!", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-16.png"},
+    {numero: "17", titulo: "Educação Social", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-17.png"},
+    {numero: "18", titulo: "Tarot", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-18.png"},
+    {numero: "19", titulo: "Gamificação", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-19.png"},
+    {numero: "20", titulo: "Cafeterias", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-20.png"},
+    {numero: "21", titulo: "Palanque", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-21.png"},
+    {numero: "22", titulo: "Músicas e Estilos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-22.png"},
+    {numero: "23", titulo: "Pepino", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-23.png"},
+    {numero: "24", titulo: "Curitiba", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-24.png"},
+    {numero: "25", titulo: "LGBT", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-25.png"},
+    {numero: "26", titulo: "Meu 1º AP", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-26.png"},
+    {numero: "27", titulo: "Plantas", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-27.png"},
+    {numero: "28", titulo: "Batata Palha", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-28.png"},
+    {numero: "29", titulo: "São Paulo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-29.png"},
+    {numero: "30", titulo: "Prêmios", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-30.png"},
+    {numero: "31", titulo: "São Jerônimo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-31.png"},
+    {numero: "32", titulo: "Surrealismo", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-32.png"},
+    {numero: "33", titulo: "Jogos favoritos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-33.png"},
+    {numero: "34", titulo: "IFantasy", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-34.png"},
+    {numero: "35", titulo: "Ilustração", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-35.png"},
+    {numero: "36", titulo: "Empresas", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-36.png"},
+    {numero: "37", titulo: "CTG Coxilha Verde", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-37.png"},
+    {numero: "38", titulo: "Cabelo colorido", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-38.png"},
+    {numero: "39", titulo: "Alê", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-39.png"},
+    {numero: "40", titulo: "Hiperfoco", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-40.png"},
 )
 
 vBaralho = vBaralho.sort(() => Math.random() - 0.5);
@@ -183,6 +190,12 @@ function organizarCartas() {
     var lTitulosCartas = document.getElementsByClassName("titulo");
     for (let x = 0; x < lTitulosCartas.length; x++) {
         lTitulosCartas[x].style.opacity = "0";
+    }
+
+    // Oculta as bordas
+    var vBordas = document.querySelectorAll('.borda');
+    for (let x = 0; x < vBordas.length; x++) {
+        vBordas[x].style.display = "block";
     }
 
     //Calcula a posição em que as cartas devem ficar
