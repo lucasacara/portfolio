@@ -15,10 +15,55 @@ function criarCarta(carta, pos) {
 function clickCarta(posVetor) {
     if (!vArrastando) {
         var cartaSelect = document.getElementById("c"+posVetor);
+
+        document.getElementById("imgCartaSelect").style.backgroundImage = "url('img/sobre-mim/carta-"+vBaralho[posVetor].numero+".jpg')";
+        document.getElementById("tituloCartaSelect").innerHTML = vBaralho[posVetor].titulo;
+
+        if (vBaralho[posVetor].naipe == "azul") {
+            document.getElementById("naipeCartaSelect").innerHTML = "Carreira";
+            document.getElementById("naipeCartaSelect").style.backgroundColor = "#3C8AFF";
+            document.getElementById("naipeCartaSelect").style.color = "#FFFFFF";
+        } else if (vBaralho[posVetor].naipe == "vermelho") {
+            document.getElementById("naipeCartaSelect").innerHTML = "Unidades e pessoas";
+            document.getElementById("naipeCartaSelect").style.backgroundColor = "#FF6A56";
+            document.getElementById("naipeCartaSelect").style.color = "#FFFFFF";
+        } else if (vBaralho[posVetor].naipe == "amarelo") {
+            document.getElementById("naipeCartaSelect").innerHTML = "Pessoal";
+            document.getElementById("naipeCartaSelect").style.backgroundColor = "#FFDB1C";
+            document.getElementById("naipeCartaSelect").style.color = "#000000";
+        } else if (vBaralho[posVetor].naipe == "verde") {
+            document.getElementById("naipeCartaSelect").innerHTML = "Lugares e eventos";
+            document.getElementById("naipeCartaSelect").style.backgroundColor = "#39D82B";
+            document.getElementById("naipeCartaSelect").style.color = "#FFFFFF";
+        }
+        
+        document.getElementById("descCartaSelect").innerHTML = vBaralho[posVetor].descricao;
+        document.getElementById("modalCarta").style.display = "block";
     } else {
         vArrastando = false;
     }
     
+}
+
+function recomecarCartas() {
+    var DRAG_ELEMENTS = document.querySelectorAll('.carta');
+
+    for (let x=0; x<DRAG_ELEMENTS.length; x++) {
+        DRAG_ELEMENTS[x].style.transition = "ease-in-out .5s";
+        DRAG_ELEMENTS[x].style.top = "0px";
+        DRAG_ELEMENTS[x].style.left = "0px";
+        DRAG_ELEMENTS[x].style.transform = "rotate(0deg)";
+    }
+
+    setTimeout(function(){
+        for (let x=0; x<DRAG_ELEMENTS.length; x++) {
+            DRAG_ELEMENTS[x].style.transition = "unset";
+        }
+    }, 530);
+}
+
+function fecharModal() {
+    document.getElementById("modalCarta").style.display = "none";
 }
 
 var vBaralho = []
