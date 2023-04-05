@@ -28,7 +28,7 @@
       height: 100%;
       overflow: auto;
       
-      --corFundo: #f0f0f0;
+      --corFundo: #fdfdfd;
       --wCarta: 224px;
       --hCarta: 350px;
   }
@@ -63,7 +63,7 @@
 #contBaralho {
   width: var(--wCarta);
   height: var(--hCarta);
-  overflow: visible;
+  overflow: hidden;
 
   position: absolute;
 
@@ -71,10 +71,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  /*background-color: #beae5a;*/
-  border-style: dashed;
+  background-color: transparent;
+  border-style: solid;
   border-width: 2px;
-  border-color: #e7e1c0;
+  border-color: #d6d6d6;
   border-radius: 8px;
 
   box-sizing: border-box;
@@ -82,6 +82,10 @@
   -webkit-box-sizing: border-box;
 
   transition: ease-in-out .3s;
+  opacity: 0;
+
+  animation: animFadeIn 2s 6.5s forwards,
+             animBaralho 2s 8.5s forwards;
 }
 
 .msgDefault {
@@ -95,6 +99,7 @@
   transform: translate(-50%, -50%);
 
   text-align: center;
+  opacity: 0;
 }
 
 .carta {
@@ -106,13 +111,16 @@
   border-radius: 8px;
   cursor: grab;
 
-  top: 0;
+  top: 400px;
   left: 0;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* transition: linear 0.05s; */
+  /* box-shadow: 0px 1px 1px rgba(0,0,0,0.2); */
+
+  animation: animCartaSurgir 0.5s 9.5s forwards;
 }
 
 .carta:hover {
@@ -170,4 +178,119 @@
 [data-naipe="vermelho"] .titulo {
   border-bottom: 24px solid #FF6A56;
   color: #FFFFFF;
+}
+
+#contInicio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  height: auto;
+  width: auto;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  animation: animFadeInOut 5s .5s forwards,
+             removeDisplay .2s 5.1s forwards;
+}
+
+#contInicio .image {
+  width: 56px;
+  height: 56px;
+  
+  background-image: url(../img/sobre-mim/fones.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#contInicio .texto {
+  font-family: "Gloria Hallelujah";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@keyframes animFadeIn {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animFadeOut {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animFadeInOut {
+  0% {
+    opacity: 0;
+  } 20% {
+    opacity: 1;
+  } 80% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+
+}
+@keyframes animBaralho {
+  0% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    background: transparent;
+    overflow: hidden;
+  } 20% {
+    border-top-width: 10px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-color: #EBEBEB;
+    background: linear-gradient(#f5f5f5, #e7e7e7);
+    overflow: hidden;
+  } 80% {
+    border-top-width: 10px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-color: #EBEBEB;
+    background: linear-gradient(#f5f5f5, #e7e7e7);
+    overflow: hidden;
+  } 100% {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    background: transparent;
+    overflow: visible;
+  }
+}
+
+@keyframes animCartaSurgir {
+  0% {
+    top: 400px;
+  } 100% {
+    top: 0px;
+  }
+}
+
+@keyframes removeDisplay {
+  0% {
+    display: block;
+  } 100% {
+    display: none;
+  }
 }
