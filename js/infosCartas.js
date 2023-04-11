@@ -93,13 +93,13 @@ var vBaralho = []
 var vArrastando = false
 
 vBaralho.push(
-    {numero: "1", titulo: "Minas Gerais", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.png"},
+    {numero: "1", titulo: "O Dinossauro Rosa", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-1.png"},
     {numero: "2", titulo: "TDAH", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-2.png"},
     {numero: "3", titulo: "IFSul", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-3.png"},
     {numero: "4", titulo: "Laura", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-4.png"},
     {numero: "5", titulo: "Mãe e Pai", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-5.png"},
     {numero: "6", titulo: "Linha Grão-Pará", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-6.png"},
-    {numero: "7", titulo: "Riveira", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-7.png"},
+    {numero: "7", titulo: "Cabana de cobertor", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-7.png"},
     {numero: "8", titulo: "Filmes preferidos", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-8.png"},
     {numero: "9", titulo: "AP Porto Alegre", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-9.png"},
     {numero: "10", titulo: "Perto e longe", naipe: "vermelho", descricao: "Sem descrição.", img: "img/sobre-mim/carta-10.png"},
@@ -121,7 +121,7 @@ vBaralho.push(
     {numero: "26", titulo: "Meu 1º AP", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-26.png"},
     {numero: "27", titulo: "Plantas", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-27.png"},
     {numero: "28", titulo: "Batata Palha", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-28.png"},
-    {numero: "29", titulo: "São Paulo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-29.png"},
+    {numero: "29", titulo: "Catavento", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-29.png"},
     {numero: "30", titulo: "Prêmios", naipe: "azul", descricao: "Sem descrição.", img: "img/sobre-mim/carta-30.png"},
     {numero: "31", titulo: "São Jerônimo", naipe: "verde", descricao: "Sem descrição.", img: "img/sobre-mim/carta-31.png"},
     {numero: "32", titulo: "Surrealismo", naipe: "amarelo", descricao: "Sem descrição.", img: "img/sobre-mim/carta-32.png"},
