@@ -58,8 +58,18 @@ async function girarCarta(angulo, elem) {
     }
 }
 
+var vBackground = false;
+
 function somArrastarCarta() {
     var numAudio = Math.round(randomMinMax(1, 10))
 
-    new Audio('sound/sobre-mim/papel-'+numAudio+'.mp3').play();
+    var som = new Audio('sound/sobre-mim/papel-'+numAudio+'.mp3');
+    som.play();
+
+    if (!vBackground) {
+        vBackground = true;
+        var somBG = new Audio('sound/sobre-mim/background.mp3');
+        somBG.loop = true;
+        somBG.play();
+    }
 }

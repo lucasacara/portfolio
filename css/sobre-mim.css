@@ -397,6 +397,7 @@
 }
 
 #tituloCartaSelect {
+  position: relative;
   font-family: "Gloria Hallelujah";
   font-weight: 400;
   font-size: 18px;
@@ -404,6 +405,7 @@
 }
 
 #naipeCartaSelect {
+  position: relative;
   font-family: "Kanit";
   font-weight: 400;
   font-size: 16px;
@@ -421,6 +423,7 @@
 }
 
 #descCartaSelect {
+  position: relative;
   font-family: "Gloria Hallelujah";
   font-weight: 400;
   font-size: 14px;
@@ -432,6 +435,9 @@
   border-radius: 8px;
   overflow-y: auto;
   padding: 12px;
+  max-width: calc(100% - 24px);
+  max-height: 237px;
+  overflow: auto;
 }
 
 @keyframes animFadeIn {
