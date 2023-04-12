@@ -22,6 +22,7 @@ DRAG_ELEMENTS.forEach(dragElem => {
         isDragging = true
         highestIndex ++
 
+        somArrastarCarta();
     });
 
     DRAGGIE.on('dragEnd', event => {
@@ -34,6 +35,10 @@ DRAG_ELEMENTS.forEach(dragElem => {
     });
 
 });
+
+function randomMinMax(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
@@ -51,4 +56,10 @@ async function girarCarta(angulo, elem) {
             await delay(10);
         }
     }
+}
+
+function somArrastarCarta() {
+    var numAudio = Math.round(randomMinMax(1, 10))
+
+    new Audio('sound/sobre-mim/papel-'+numAudio+'.mp3').play();
 }
