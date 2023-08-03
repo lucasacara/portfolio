@@ -2,6 +2,7 @@
     --corProjeto: #EDAF2F;
     --corCabecalho: #EDAF2F;
     --corBase1: var(--corProjeto);
+    --corClara1: #f8f4ea;
 }
 
 #Intro .img_fundo {
