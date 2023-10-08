@@ -1,0 +1,30 @@
+html {
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    
+    --Azul: #252DFF;
+    --Rosa: #D80EE4;
+    --Laranja: #E59C33;
+    --Turquesa: #20CE94;
+    --Branco: #FAFAFA;
+    --Preto: #242322;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+    
+    background-color: var(--Branco);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}

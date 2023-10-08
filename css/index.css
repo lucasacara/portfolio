@@ -1,0 +1,34 @@
+.page_cont {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;   
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.main-pagina {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--Azul);
+    background-image: url("../img/home/bg-1.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.botao-down {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    bottom: 36px;
+
+   
+    background-color: var(--Branco);    
+    border: 2px solid var(--Preto, #242322);
+    border-radius: 18px;
+
+    cursor: pointer;
+}
