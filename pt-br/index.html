@@ -456,7 +456,6 @@
         $("#fragTransition").css("width", "0px");
         $("#fragTransition").css("height", "0px");
 
-
         setTimeout(function () {
             $("#fragTransition").css("transition", "cubic-bezier(.6,.19,.29,.54) 1s");
 
@@ -562,13 +561,23 @@
         } else {
             $("#pnHoverProj").css("border-radius", "8px 8px 0px 8px");
         }
-
-
     }
 
     function fechaPopupProjeto(event) {
-
         $("#pnHoverProj").css("display", "none");
+    }
 
+    window.onload = function() {
+        if ($("#pnHoverProj").css("display") != "none") {
+            console.log("Voltou");
+
+            $("#fragTransition").css("width", "0px");
+            $("#fragTransition").css("height", "0px");
+
+            setTimeout(function () {
+                $("#fragTransition").css("transition", "unset");
+                $("#pnHoverProj").css("display", "none");
+            }, 1000);
+        }
     }
 </script>
