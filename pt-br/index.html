@@ -423,10 +423,14 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
     $(".button-cab").on("mouseenter", somHoverCab);
+    var cliqueX, cliqueY = 0;
 
     function carregarProjeto(event, vCor, vURL) {
         var hWindow = $(window).height();
         var wWindow = $(window).width();
+
+        cliqueX = event.pageX;
+        cliqueY = event.pageY;
 
         var wFrag = 0;
         var hFrag = 0;
@@ -571,6 +575,8 @@
         if ($("#pnHoverProj").css("display") != "none") {
             console.log("Voltou");
 
+            $("#fragTransition").css("left", cliqueX);
+            $("#fragTransition").css("top", cliqueY);
             $("#fragTransition").css("width", "0px");
             $("#fragTransition").css("height", "0px");
 
