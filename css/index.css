@@ -1,8 +1,172 @@
+#fragTransition {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0px;
+    height: 0px;
+
+    transition: ease-out 1s;
+    z-index: 100;
+}
+
+#fragTransition svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#pnHoverProj {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 230px;
+    height: min-content;
+
+    flex-direction: column;
+    gap: 0px;
+    flex-wrap: nowrap;
+
+    z-index: 99;
+    background-color: var(--Branco);
+    border-radius: 0px 8px 8px 8px;
+    border: 2px solid var(--Preto);
+    overflow: hidden;
+}
+
+#pnHoverProj .cont {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+
+    width: auto;
+    height: min-content;
+
+    font-family: "BioRhyme", serif;    
+}
+
+#pnHoverProj .cont .titulo {
+    position: relative;
+    width: auto;
+    height: min-content;
+
+    color: var(--Preto);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px; 
+}
+
+#pnHoverProj .cont .sep {
+    position: relative;
+    width: 100%;
+    height: 1px;
+
+    background-color: #DDDDDD;
+}
+
+#pnHoverProj .cont .desc {
+    position: relative;
+    width: auto;
+    height: min-content;
+
+    color: #716E6B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px; 
+}
+
+#pnHoverProj .cont .tags {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    width: auto;
+    height: min-content;
+}
+
+#pnHoverProj .cont .tags > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    padding: 0px 8px;
+
+    width: max-content;
+    height: 30px;
+
+    border: 2px solid var(--Preto);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+#pnHoverProj .cont .tags .categoria {
+    background-color: var(--cBaseCat);
+    color: var(--cDestaqueCat);
+}
+
+#pnHoverProj .cont .tags .categoria svg path {
+    fill: var(--cDestaqueCat);
+}
+
+#pnHoverProj .cont .tags .premios {
+    background-color: var(--Turquesa);
+    color: var(--Preto);
+}
+
+#pnHoverProj .cont .tags .premios svg path {
+    fill: var(--Preto);
+}
+
+#pnHoverProj .rodape-proj {
+    display: flex;
+    position: relative;
+
+    width: auto;
+    height: min-content;
+
+    background-color: var(--cBase);
+    padding: 10px 0px;
+
+    flex-direction: row;
+    gap: 6px;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-color: var(--cDestaque);
+    border-width: 2px 0px 0px 0px;
+}
+
+#pnHoverProj .rodape-proj .icone svg path {
+    fill: var(--cDestaque);
+}
+
+#pnHoverProj .rodape-proj .texto {
+    text-align: center;
+    font-family: "BioRhyme", serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    color: var(--cDestaque);
+}
+
 .page_cont {
     position: relative;
     width: calc(100% var(--sb-size));
     height: min-content;
-    
 }
 
 .main-pagina {
@@ -29,8 +193,8 @@
     height: 54px;
     bottom: 36px;
 
-   
-    background-color: var(--Branco);    
+
+    background-color: var(--Branco);
     border: 2px solid var(--Preto, #242322);
     border-radius: 18px;
 
@@ -40,7 +204,7 @@
 .header {
     height: auto;
     width: calc(100% var(--sb-size));
-    
+
     background-color: var(--Branco);
     border: 0px solid var(--Preto, #242322);
     border-width: 0px 0px 2px 0px;
@@ -78,14 +242,14 @@
     flex-direction: row;
     gap: 36px;
     justify-content: center;
-    align-items: center;   
-    
+    align-items: center;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.header .cab-desktop .cont-botoes + .cont-botoes {
+.header .cab-desktop .cont-botoes+.cont-botoes {
     top: 50%;
     left: unset;
     right: 24px;
@@ -113,7 +277,7 @@
     height: 42px;
 }
 
-.button-cab p{
+.button-cab p {
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -142,7 +306,6 @@
 
 .button-cab.lab {
     width: 42px;
-    transition: ease-out 0.15s rotate;
 }
 
 .button-cab.ilustra:hover {
@@ -184,7 +347,7 @@
     font-size: 30px;
     font-weight: 600;
     color: #AA1FFF;
-    rotate: -5deg;
+    
 }
 
 .button-accordion {
@@ -203,7 +366,7 @@
     border-width: 2px;
     border-style: solid;
     border-color: var(--Preto);
-    
+
     transition: ease-in-out 0.2s;
 }
 
@@ -229,7 +392,7 @@
     gap: 8px;
 }
 
-.button-accordion:hover .titulo{
+.button-accordion:hover .titulo {
     width: var(--wAnim);
     color: var(--txtColor);
 }
@@ -246,9 +409,11 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    
+
     border: 0px solid var(--Preto, #242322);
     border-bottom-width: 2px;
+
+    overflow: hidden;
 }
 
 .secao-pag .metade {
@@ -258,27 +423,199 @@
     background-image: var(--bgimg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    transition: cubic-bezier(.16,.66,.39,.99) 1.5s;
 }
 
-.secao-pag .metade + .metade {
+.secao-pag  .cont-projeto:hover {
+    transform: scale(1.1);
+    width: 100%;
+}
+
+.secao-pag  .cont-projeto + .cont-projeto:hover {
+    transform: scale(1.0);
+    width: 120%;
+}
+
+.secao-pag .metade[data-clique] {
+    cursor: pointer;
+}
+
+.secao-pag .metade+.metade {
     border: 0px solid var(--Preto, #242322);
     border-left-width: 2px;
 }
 
-#fragTransition {
+.secao-pag .metade .texto-central {
+    position: relative;
+
+    height: min-content;
+    width: 100%;
+    max-width: var(--maxWidth);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.secao-pag .metade .texto-central .chamada {
+    position: relative;
+
+    height: min-content;
+    width: 100%;
+
+    color: var(--Preto);
+    text-align: center;
+    font-family: "Londrina Solid", cursive;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+
+    text-transform: uppercase;
+}
+
+.botao-seta {
+    position: relative;
+
+    height: min-content;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px;
+    border: 2px solid var(--Preto);
+
+    cursor: pointer;
+}
+
+.botao-seta .texto {
+    position: relative;
+    color: var(--Preto, #242322);
+    font-family: "BioRhyme", serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.botao-seta .icone {
+    position: relative;    
+}
+
+.botao-seta .anim {
     position: absolute;
     top: 0;
     left: 0;
 
-    width: 0px;
-    height: 0px;
+    background-color: var(--Branco);
+    height: 100%;
+    width: 0%;
+    mix-blend-mode: exclusion;
 
-    transition: ease-out 1s;
-    z-index: 100;
+    transition: cubic-bezier(.16,.66,.39,.99) 0.5s;
+    z-index: 3;
 }
 
-#fragTransition svg {
-    position: relative;
+.secao-pag .metade:hover .botao-seta .anim, .botao-seta:hover .anim {
     width: 100%;
+}
+
+.secao-pag .metade:hover .botao-seta .icone, .botao-seta:hover .icone {
+    animation: 0.8s linear 0s infinite animSetaBotao;
+}
+
+
+@keyframes animSetaBotao {
+    0% {
+        margin-right: 0px;
+    } 25% {
+        margin-right: -6px;
+    } 50% {
+        margin-right: 0px;
+    } 75% {
+        margin-right: 6px;
+    } 100% {
+        margin-right: 0px;
+    }
+}
+
+.barra-contato {
+    position: relative;
+    width: auto;
+    height: 72px;
+    background-color: var(--Azul);
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 24px;
+
+    border: 0px solid var(--Preto);
+    border-bottom-width: 2px;
+}
+
+.barra-contato .chamada {
+    position: relative;
+    height: auto;
+    width: auto;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.barra-contato .chamada .texto {
+    position: relative;
+    color: var(--Branco);
+    font-family: "BioRhyme", serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.barra-contato .botao {
+    position: relative;
+    width: 54px;
+    height: 54px;
+
+
+    background-color: var(--Branco);
+    border: 2px solid var(--Preto);
+    border-radius: 18px;
+}
+
+.barra-contato .anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--Branco);
     height: 100%;
+    width: 0%;
+    opacity: 0.2;
+
+    transition: cubic-bezier(.16,.66,.39,.99) 0.5s;
+}
+
+.barra-contato:hover .anim {
+    width: 100%;
+}
+
+.barra-contato:hover .botao svg {
+    animation: 0.8s linear 0s infinite animSetaBotao;
 }

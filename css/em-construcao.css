@@ -1,0 +1,165 @@
+.page_cont {
+    position: relative;
+    width: calc(100% var(--sb-size));
+    height: min-content;
+
+    background-color: var(--cPagina);
+}
+
+.secao-pag {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    overflow: hidden;
+
+    opacity: 0;
+    animation: 2s linear 0s animFadeIn forwards;
+}
+
+@keyframes animFadeIn {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.secao-pag .metade {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor);
+    background-image: var(--bgimg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    transition: cubic-bezier(.16,.66,.39,.99) 1.5s;
+}
+
+.secao-pag  .cont-projeto:hover {
+    transform: scale(1.1);
+    width: 100%;
+}
+
+.secao-pag  .cont-projeto + .cont-projeto:hover {
+    transform: scale(1.0);
+    width: 120%;
+}
+
+.secao-pag .metade[data-clique] {
+    cursor: pointer;
+}
+
+.secao-pag .metade+.metade {
+    border: 0px solid var(--Preto, #242322);
+    border-left-width: 2px;
+}
+
+.secao-pag .metade .texto-central {
+    position: relative;
+
+    height: min-content;
+    width: 100%;
+    max-width: var(--maxWidth);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.secao-pag .metade .texto-central .chamada {
+    position: relative;
+
+    height: min-content;
+    width: 100%;
+
+    color: var(--Preto);
+    text-align: center;
+    font-family: "Londrina Solid", cursive;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+
+    text-transform: uppercase;
+}
+
+.botao-seta {
+    position: relative;
+
+    height: min-content;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 16px;
+    border: 2px solid var(--Preto);
+
+    cursor: pointer;
+}
+
+.botao-seta .texto {
+    position: relative;
+    color: var(--Preto, #242322);
+    font-family: "BioRhyme", serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.botao-seta .icone {
+    position: relative;    
+}
+
+.botao-seta .anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--Branco);
+    height: 100%;
+    width: 0%;
+    mix-blend-mode: exclusion;
+
+    transition: cubic-bezier(.16,.66,.39,.99) 0.5s;
+    z-index: 3;
+}
+
+.botao-seta:hover .anim {
+    width: 100%;
+}
+
+.botao-seta:hover .icone {
+    animation: 0.8s linear 0s infinite animSetaBotao;
+}
+
+
+@keyframes animSetaBotao {
+    0% {
+        margin-right: 0px;
+    } 25% {
+        margin-right: -6px;
+    } 50% {
+        margin-right: 0px;
+    } 75% {
+        margin-right: 6px;
+    } 100% {
+        margin-right: 0px;
+    }
+}
