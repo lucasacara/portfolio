@@ -575,15 +575,17 @@
         if ($("#pnHoverProj").css("width") != "0px") {
             console.log("Voltou");
 
-            $("#fragTransition").css("left", cliqueX);
-            $("#fragTransition").css("top", cliqueY);
-            $("#fragTransition").css("width", "0px");
-            $("#fragTransition").css("height", "0px");
+            setTimeout(function () {
+                $("#fragTransition").css("left", cliqueX);
+                $("#fragTransition").css("top", cliqueY);
+                $("#fragTransition").css("width", "0px");
+                $("#fragTransition").css("height", "0px");
+            }, 10);
 
             setTimeout(function () {
                 $("#fragTransition").css("transition", "unset");
                 $("#pnHoverProj").css("display", "none");
-            }, 1000);
+            }, 1010);
         }
     }
 </script>
