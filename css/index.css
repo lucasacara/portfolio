@@ -1,22 +1,26 @@
 .page_cont {
     position: relative;
-    width: 100vw;
-    height: auto;
-    overflow: hidden;   
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: calc(100% var(--sb-size));
+    height: min-content;
+    
 }
 
 .main-pagina {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 20px);
 
     background-color: var(--Azul);
     background-image: url("../img/home/bg-1.png");
     background-position: center;
     background-size: cover;
+
+    border: 0px solid var(--Preto, #242322);
+    border-width: 0px 0px 2px 0px;
+}
+
+.main-pagina .logo svg {
+    max-width: 80vw;
 }
 
 .botao-down {
@@ -31,4 +35,250 @@
     border-radius: 18px;
 
     cursor: pointer;
+}
+
+.header {
+    height: auto;
+    width: calc(100% var(--sb-size));
+    
+    background-color: var(--Branco);
+    border: 0px solid var(--Preto, #242322);
+    border-width: 0px 0px 2px 0px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    z-index: 90;
+}
+
+.cab-desktop {
+    position: relative;
+    width: calc(100% var(--sb-size));
+    height: 72px;
+}
+
+.cab-desktop .logo-cab {
+    position: absolute;
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px;
+}
+
+.header .cab-desktop .cont-botoes {
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: min-content;
+    flex-direction: row;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;   
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .cab-desktop .cont-botoes + .cont-botoes {
+    top: 50%;
+    left: unset;
+    right: 24px;
+    transform: translateY(-50%);
+
+    gap: 12px;
+}
+
+.button-cab {
+    position: relative;
+    font-family: "BioRhyme", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Preto);
+
+    text-align: center;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    height: 42px;
+}
+
+.button-cab p{
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.button-cab.ilustra {
+    width: 142px;
+}
+
+.button-cab.interface {
+    width: 88px;
+    /* transition: ease-out 0.15s letter-spacing; */
+}
+
+.button-cab.editorial {
+    width: 85px;
+    /* transition: ease-out 0.15s font-size; */
+}
+
+.button-cab.grafico {
+    width: 180px;
+    /* transition: ease-out 0.15s font-size; */
+}
+
+.button-cab.lab {
+    width: 42px;
+    transition: ease-out 0.15s rotate;
+}
+
+.button-cab.ilustra:hover {
+    text-transform: uppercase;
+    font-family: "Londrina Solid", cursive;
+    font-size: 24px;
+    font-weight: unset;
+    color: var(--Laranja);
+}
+
+.button-cab.interface:hover {
+    text-transform: uppercase;
+    font-family: 'David Libre', serif;
+    font-size: 24px;
+    font-weight: unset;
+    color: var(--Azul);
+    letter-spacing: 1px;
+}
+
+.button-cab.editorial:hover {
+    text-transform: uppercase;
+    font-family: 'Comic Sans', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--Rosa);
+}
+
+.button-cab.grafico:hover {
+    text-transform: uppercase;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--Laranja);
+}
+
+.button-cab.lab:hover {
+    text-transform: uppercase;
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    color: #AA1FFF;
+    rotate: -5deg;
+}
+
+.button-accordion {
+    position: relative;
+    height: auto;
+    width: auto;
+    min-width: 24px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--Preto);
+    
+    transition: ease-in-out 0.2s;
+}
+
+.button-accordion .titulo {
+    font-family: "BioRhyme", serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Preto);
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    width: 0px;
+    transition: ease-out 0.2s;
+}
+
+.button-accordion svg path {
+    transition: ease-out 0.2s;
+}
+
+.button-accordion:hover {
+    background-color: var(--bgColor);
+    gap: 8px;
+}
+
+.button-accordion:hover .titulo{
+    width: var(--wAnim);
+    color: var(--txtColor);
+}
+
+.button-accordion:hover svg path {
+    fill: var(--txtColor);
+}
+
+.secao-pag {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 72px);
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    
+    border: 0px solid var(--Preto, #242322);
+    border-bottom-width: 2px;
+}
+
+.secao-pag .metade {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor);
+    background-image: var(--bgimg);
+    background-position: center;
+    background-size: cover;
+}
+
+.secao-pag .metade + .metade {
+    border: 0px solid var(--Preto, #242322);
+    border-left-width: 2px;
+}
+
+#fragTransition {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0px;
+    height: 0px;
+
+    transition: ease-out 1s;
+    z-index: 100;
+}
+
+#fragTransition svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
