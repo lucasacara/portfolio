@@ -181,10 +181,38 @@
 
     border: 0px solid var(--Preto, #242322);
     border-width: 0px 0px 2px 0px;
+
+    /* animation: animImgsHome1 3s ease-in-out 0s infinite alternate; */
+    animation: animImgsHome2 1.52s step-start 0s infinite;
+}
+
+@keyframes animImgsHome1 {
+    0%{
+        background-image: url("../img/home/bg-1.png");
+    } 100% {
+        background-image: url("../img/home/bg-2.png");
+    }
+    
+}
+
+@keyframes animImgsHome2 {
+    0%{
+        background-image: url("../img/home/bg-1.png");
+    } 50% {
+        background-image: url("../img/home/bg-2.png");
+    }
+    
 }
 
 .main-pagina .logo svg {
     max-width: 80vw;
+}
+
+.main-pagina .logo img {
+    width: 80vw;
+    height: auto;
+    max-width: 420px;
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(103%); */
 }
 
 .botao-down {
@@ -232,30 +260,11 @@
     top: 50%;
     transform: translateY(-50%);
     left: 24px;
+    margin-top: 3px;
 }
 
 .header .cab-desktop .cont-botoes {
-    position: absolute;
-    display: flex;
-    width: auto;
-    height: min-content;
-    flex-direction: row;
-    gap: 36px;
-    justify-content: center;
-    align-items: center;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.header .cab-desktop .cont-botoes+.cont-botoes {
-    top: 50%;
-    left: unset;
-    right: 24px;
-    transform: translateY(-50%);
-
-    gap: 12px;
+    display: none;
 }
 
 .button-cab {
@@ -404,11 +413,11 @@
 .secao-pag {
     position: relative;
     width: 100%;
-    height: calc(100vh - 72px);
+    height: auto;
 
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
 
     border: 0px solid var(--Preto, #242322);
     border-bottom-width: 2px;
@@ -417,8 +426,9 @@
 }
 
 .secao-pag .metade {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 72px);
     background-color: var(--bgcolor);
     background-image: var(--bgimg);
     background-position: center;
@@ -618,4 +628,34 @@
 
 .barra-contato:hover .botao svg {
     animation: 0.8s linear 0s infinite animSetaBotao;
+}
+
+@media only screen and (min-width: 800px) {
+    .secao-pag {
+        flex-direction: row;
+    }
+
+    .header .cab-desktop .cont-botoes {
+        position: absolute;
+        display: flex;
+        width: auto;
+        height: min-content;
+        flex-direction: row;
+        gap: 36px;
+        justify-content: center;
+        align-items: center;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .header .cab-desktop .cont-botoes+.cont-botoes {
+        top: 50%;
+        left: unset;
+        right: 24px;
+        transform: translateY(-50%);
+    
+        gap: 12px;
+    }
 }

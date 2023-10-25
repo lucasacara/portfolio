@@ -29,63 +29,6 @@ body{
     scrollbar-color: var(--sb-thumb-color) 
                      var(--sb-track-color);
 }
-
-body::-webkit-scrollbar {
-    width: var(--sb-size); 
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 0px;
-    border: 2px solid var(--sb-border-color);
-    border-width: 0px 2px 0px 2px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 10px;
-    border: 0px ridge var(--sb-border-color);
-    border-width: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--Azul);
-}
-
-::-webkit-scrollbar-button:single-button {
-    background-color: var(--sb-track-color);
-    display: block;
-    height: 24px; 
-    width: var(--sb-size);
-
-    border-style: solid;
-    border-color: var(--sb-border-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-}
-
-::-webkit-scrollbar-button:single-button:decrement {
-    border-width: 2px 2px 0px 2px;
-    background-image: url("../img/arrow_drop_up_b.png");
-}
-
-::-webkit-scrollbar-button:single-button:decrement:hover {
-    border-width: 2px;
-    background-color: var(--Azul);
-    background-image: url("../img/arrow_drop_up_w.png");
-}
-
-::-webkit-scrollbar-button:single-button:increment {
-    border-width: 0px 2px 2px 2px;
-    background-image: url("../img/arrow_drop_down_b.png");
-}
-
-::-webkit-scrollbar-button:single-button:increment:hover {
-    border-width: 2px;
-    background-color: var(--Azul);
-    background-image: url("../img/arrow_drop_down_w.png");
-}
  
 
 * {
@@ -110,10 +53,6 @@ a:any-link {
     display: none;
 }
 
-.button-cab {
-
-}
-
 @media only screen and (min-width: 800px) {
     .view-mobile-flex {
         display: none;
@@ -121,5 +60,62 @@ a:any-link {
 
     .view-desktop-flex {
         display: flex;
+    }
+
+    body::-webkit-scrollbar {
+        width: var(--sb-size); 
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 0px;
+        border: 2px solid var(--sb-border-color);
+        border-width: 0px 2px 0px 2px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 10px;
+        border: 0px ridge var(--sb-border-color);
+        border-width: 2px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--Azul);
+    }
+    
+    ::-webkit-scrollbar-button:single-button {
+        background-color: var(--sb-track-color);
+        display: block;
+        height: 24px; 
+        width: var(--sb-size);
+    
+        border-style: solid;
+        border-color: var(--sb-border-color);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+    
+    ::-webkit-scrollbar-button:single-button:decrement {
+        border-width: 2px 2px 0px 2px;
+        background-image: url("../img/arrow_drop_up_b.png");
+    }
+    
+    ::-webkit-scrollbar-button:single-button:decrement:hover {
+        border-width: 2px;
+        background-color: var(--Azul);
+        background-image: url("../img/arrow_drop_up_w.png");
+    }
+    
+    ::-webkit-scrollbar-button:single-button:increment {
+        border-width: 0px 2px 2px 2px;
+        background-image: url("../img/arrow_drop_down_b.png");
+    }
+    
+    ::-webkit-scrollbar-button:single-button:increment:hover {
+        border-width: 2px;
+        background-color: var(--Azul);
+        background-image: url("../img/arrow_drop_down_w.png");
     }
 }
