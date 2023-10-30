@@ -69,6 +69,12 @@ footer.w1440 {
     display: none;
 }
 
+.cont_footer {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
 footer {
     position: relative;
     width: auto;
