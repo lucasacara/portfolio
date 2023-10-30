@@ -54,7 +54,8 @@
         content="Ergonomia e sustentabilidade como você nunca viu em um inseticidas antes. Este projeto consiste em frasco de inseticidas reutilizável
         e mais ergonômico, que chega para reimaginar a forma como os consumidores utilizam e se relacionam com os inseticidas no dia a dia.">
     <meta property="og:updated_time" content="1440432930" />
-    <meta property="og:image:secure_url" itemprop="image" content="https://www.lucasacara.com.br/img/projetos/mat-inset-capsulas/preview.png">
+    <meta property="og:image:secure_url" itemprop="image"
+        content="https://www.lucasacara.com.br/img/projetos/mat-inset-capsulas/preview.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -277,6 +278,10 @@
             <img src="../../img/projetos/mat-inset-capsulas/mat_inset_09.jpg" />
         </div>
 
+        <div class="secao-pag img-unica frame">
+            <iframe id="jxFrame" frameborder="0" class="juxtapose" width="1920" height="1440" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=690e5aec-773e-11ee-b5be-6595d9b17862"></iframe>
+        </div>
+
         <div class="secao-pag duas-imgs">
             <img src="../../img/projetos/mat-inset-capsulas/mat_inset_10.jpg" />
 
@@ -328,4 +333,27 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
     $('.cont_footer').load('../footer.html');
+
+    window.addEventListener("load", resizeJX);
+    window.addEventListener("resize", resizeJX);
+
+    function resizeJX() {
+        setTimeout(function(){
+            console.log("calculou");
+
+            wWindow = window.innerWidth;
+            vFrame = document.getElementById("jxFrame");
+
+            if (wWindow >= 1400) {
+                wWindow = 1400;
+            }
+
+            vHeight = (1440 * wWindow) / 1920;
+            vFrame.height = vHeight;
+            vFrame.width  = wWindow;
+
+            
+        },50);        
+    }
+    
 </script>
