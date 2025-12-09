@@ -1,6 +1,16 @@
+<template>
+    <a :href="PROJ_URL">
+        <div class="CardProject">
+            <div class="overlay">
+                <span class="g-bd">{{ title }}</span>
+            </div>
+            <img :src="IMG_SRC">
+            </img>
+        </div>
+    </a>
+</template>
+
 <script setup>
-
-
 const props = defineProps({
     id: {
         type: String,
@@ -12,25 +22,9 @@ const props = defineProps({
     },
 })
 
-const IMG_SRC_START = "./src/assets/img/projects/";
-const IMG_SRC_END = "/cover.webp";
-
-const IMG_SRC = IMG_SRC_START + props.id + IMG_SRC_END;
-const PROJ_URL = `#/projects/${props.id}`
-
+const IMG_SRC = `img/projects/${props.id}/cover.webp`;
+const PROJ_URL = `#/projects/${props.id}`;
 </script>
-
-<template>
-    <a :href=PROJ_URL>
-        <div class="CardProject">
-            <div class="overlay">
-                <span class="g-bd">{{ title }}</span>
-            </div>
-            <img :src=IMG_SRC>
-            </img>
-        </div>
-    </a>
-</template>
 
 <style lang="scss" scoped>
 .CardProject {
