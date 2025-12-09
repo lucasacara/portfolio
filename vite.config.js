@@ -16,5 +16,5 @@ export default defineConfig({
       { find: '@img', replacement: fileURLToPath(new URL('./src/assets/img', import.meta.url)) },
     ],
   },
-  base: '/portfolio/',
+  base: '/',
 })

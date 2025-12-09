@@ -1,11 +1,12 @@
 <script setup>
+    import { RouterLink } from 'vue-router';
 </script>
 
 <template>
     <header>
-        <a href="#/">
+        <RouterLink to="/">
             <img src="@/assets/img/logo-animation.gif"></img>
-        </a>
+        </RouterLink>
     </header>
 </template>
 

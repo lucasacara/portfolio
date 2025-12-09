@@ -1,5 +1,5 @@
 <template>
-    <a :href="PROJ_URL">
+    <RouterLink :to="PROJ_URL">
         <div class="CardProject">
             <div class="overlay">
                 <span class="g-bd">{{ title }}</span>
@@ -7,10 +7,12 @@
             <img :src="IMG_SRC">
             </img>
         </div>
-    </a>
+    </RouterLink>
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router';
+
 const props = defineProps({
     id: {
         type: String,
@@ -22,8 +24,8 @@ const props = defineProps({
     },
 })
 
-const IMG_SRC = `img/projects/${props.id}/cover.webp`;
-const PROJ_URL = `#/projects/${props.id}`;
+const IMG_SRC = `img/project/${props.id}/cover.webp`;
+const PROJ_URL = `/project/${props.id}`;
 </script>
 
 <style lang="scss" scoped>
