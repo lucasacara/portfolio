@@ -14,7 +14,7 @@ const routes = [
 
 const allowedPathsRegex = [
   /^\/$/, // Apenas "/"
-  /^\/project\/[a-zA-Z]/, // Páginas que iniciarem com "/project/" e tiverem algo escrito depois do segundo "/"
+  /^\/project\/[^/]*$/, // Páginas que iniciarem com "/project/" e tiverem algo escrito depois do segundo "/", mas sem permitir novos "/"
 ];
 
 const router = createRouter({
@@ -23,7 +23,13 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from) => {
-  if ((!strMatchesRegex(to.path, allowedPathsRegex)) && (to.path != "/not-found")) {
+  let lValid = true;
+
+  if (!strMatchesRegex(to.path, allowedPathsRegex)) {
+    lValid = false;
+  }
+
+  if (!lValid && (to.path != "/not-found")) {
     return { path: '/not-found', params: {} }
   }
 })
