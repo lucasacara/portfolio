@@ -1,8 +1,21 @@
-<script setup>
-import { ref, computed } from 'vue';
-import Header from '@/components/global/Header.vue';
-import projectsJSON from '../json/projects.json';
+<template>
+    <div id="ProjectContainer">
+        <Header></Header>
+        <h1>{{ gProjTitle }}</h1>
+        <h2>{{ gProjSubtitle }}</h2>
+        <p>{{ gProjDescription }}</p>
+        <p>*Este é um projeto desenvolvido durante a graduação em Design Visual para fins acadêmicos, não tendo
+            quaisquer vínculos com as marcas ou clientes citados e exibidos.</p>
+    </div>
+</template>
 
+<script setup>
+// IMPORTS
+import Header from '@/components/global/Header.vue';
+import projectsJSON from '@/json/projects.json';
+import { useRoute, useRouter } from 'vue-router';
+
+// PROPS
 const props = defineProps({
     id: {
         type: String,
@@ -17,17 +30,29 @@ class Project {
     }
 }
 
-</script>
+// GLOBAL VARIABLES
+var gProjTitle,
+    gProjSubtitle,
+    gProjDescription = "";
 
-<template>
-    <div id="ProjectContainer">
-        <Header></Header>
-        <h1>{{projectsJSON[$route.params.id].title}}</h1>
-        <h2>{{projectsJSON[$route.params.id].subtitle}}</h2>
-        <p>{{projectsJSON[$route.params.id].description}}</p>
-        <p>*Este é um projeto desenvolvido durante a graduação em Design Visual para fins acadêmicos, não tendo quaisquer vínculos com as marcas ou clientes citados e exibidos.</p>
-    </div>
-</template>
+// MAIN FUNCTION
+main();
+
+function main() {
+    const route = useRoute();
+    const router = useRouter();
+
+    let lProject = projectsJSON[route.params.id];
+
+    if (lProject) {
+        gProjTitle = lProject.title;
+        gProjSubtitle = lProject.subtitle;
+        gProjDescription = lProject.description;
+    } else {
+        router.push("/not-found");
+    }
+}
+</script>
 
 <style scoped>
 #ProjectContainer {
