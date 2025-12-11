@@ -4,7 +4,7 @@ import Home from "@/pages/Home.vue";
 import Project from "@/pages/Project.vue";
 import NotFound from "@/pages/NotFound.vue";
 
-import strMatchesRegex from "@/js/utils.js";
+import strMatchesRegex, { getProjectByID } from "@/js/utils.js";
 
 // GLOBAL DEFS
 const DEFAULT_TITLE = "Lucas Acara";
@@ -51,18 +51,20 @@ router.beforeEach(async (to, from) => {
 });
 
 router.afterEach(async (to, from) => {
+  // Se for a página de um projeto, busca o título do mesmo para acrescentar à aba
 	if (router.currentRoute.value.path.includes("/project/")) {
-		let lProjName = "";
+		let lProjTitle = getProjectByID(
+			router.currentRoute.value.params.id
+		).title;
 
-    
-
+		if (lProjTitle != "") {
+      router.currentRoute.value.meta = { title: lProjTitle }
+		}
 	}
 
 	let lTitle = to.meta.title
 		? `${to.meta.title} | ${DEFAULT_TITLE}`
 		: DEFAULT_TITLE;
-
-	console.log(router);
 
 	document.title = lTitle;
 });

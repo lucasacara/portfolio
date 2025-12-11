@@ -15,9 +15,8 @@
 <script setup>
 	// IMPORTS
 	import Header from "@/components/global/Header.vue";
-	import projectsJSON from "@/json/projects.json";
 	import { useRoute, useRouter } from "vue-router";
-	import { Project } from "@/js/utils.js";
+	import { getProjectByID, Project } from "@/js/utils.js";
 
 	// GLOBAL VARIABLES
 	var gProject = new Project();
@@ -29,14 +28,9 @@
 		const route = useRoute();
 		const router = useRouter();
 
-		let lProjAux = projectsJSON[route.params.id];
+		gProject = getProjectByID(route.params.id);
 
-		if (lProjAux) {
-			gProject.title = lProjAux.title;
-			gProject.subtitle = lProjAux.subtitle;
-			gProject.description = lProjAux.description;
-			gProject.academyProject = lProjAux.academyProject;
-		} else {
+		if (gProject.title == "") {
 			router.push("/not-found");
 		}
 	}

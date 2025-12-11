@@ -1,4 +1,4 @@
-import projectsJSON from '@/json/projects.json';
+import projectsJSON from "@/json/projects.json";
 
 export default function strMatchesRegex(pStr, aRegex) {
 	for (let x = 0; x < aRegex.length; x++) {
@@ -10,10 +10,29 @@ export default function strMatchesRegex(pStr, aRegex) {
 }
 
 export class Project {
-	constructor(title = "", subtitle = "", description = "", academyProject = false) {
+	constructor(
+		title = "",
+		subtitle = "",
+		description = "",
+		academyProject = false
+	) {
 		this.title = title;
 		this.subtitle = subtitle;
 		this.description = description;
 		this.academyProject = academyProject;
 	}
+}
+
+export function getProjectByID(pID) {
+	let lProjAux = projectsJSON[pID];
+	var lProject = new Project();
+
+	if (lProjAux) {
+		lProject.title = lProjAux.title;
+		lProject.subtitle = lProjAux.subtitle;
+		lProject.description = lProjAux.description;
+		lProject.academyProject = lProjAux.academyProject;
+	}
+
+  return lProject;
 }
