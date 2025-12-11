@@ -1,37 +1,55 @@
-<script setup>
-    import { RouterLink } from 'vue-router';
-</script>
-
 <template>
-    <header>
-        <RouterLink to="/">
-            <img src="@/assets/img/logo-animation.gif"></img>
-        </RouterLink>
-    </header>
+	<header>
+		<RouterLink to="/">
+			<img :class="imgClass"
+			src="@/assets/img/logo-animation.gif" />
+		</RouterLink>
+	</header>
 </template>
 
-<style scoped>
-    header {
-        position: relative;
-        width: 100%;
-        height: auto;
+<script setup>
+	import { RouterLink } from "vue-router";
+	import { computed } from "vue";
 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+	const props = defineProps({
+		logoColor: {
+			type: String,
+			required: true,
+			validator(value) {
+				return ["white", "blue"].includes(value);
+			},
+		},
+	});
 
-    header a:hover {
-        background-color: transparent;
-    }
+	const imgClass = computed(() => ({
+		white: props.logoColor == "white"
+	}));
+</script>
 
-    header img {
-        filter: brightness(0%) invert(100%);
+<style scoped lang="scss">
+	header {
+		position: relative;
+		width: 100%;
+		height: auto;
 
-        position: relative;
-        width: 100%;
-        height: auto;
-        max-width: 280px;
-    }
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header a:hover {
+		background-color: transparent;
+	}
+
+	header img {
+		position: relative;
+		width: 100%;
+		height: auto;
+		max-width: 280px;
+
+		&.white {
+			filter: brightness(0%) invert(100%);
+		}
+	}
 </style>
