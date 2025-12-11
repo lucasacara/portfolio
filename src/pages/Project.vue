@@ -1,6 +1,7 @@
 <template>
 	<div id="ProjectContainer">
 		<Header logoColor="blue"></Header>
+		<ButtonPrimary text="Voltar aos projetos" href="/"></ButtonPrimary>
 		<h1>{{ gProject.title }}</h1>
 		<h2>{{ gProject.subtitle }}</h2>
 		<p>{{ gProject.description }}</p>
@@ -17,6 +18,7 @@
 	import Header from "@/components/global/Header.vue";
 	import { useRoute, useRouter } from "vue-router";
 	import { getProjectByID, Project } from "@/js/utils.js";
+	import ButtonPrimary from "@/components/button/ButtonPrimary.vue";
 
 	// GLOBAL VARIABLES
 	var gProject = new Project();

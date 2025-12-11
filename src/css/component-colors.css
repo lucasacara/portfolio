@@ -1,0 +1,11 @@
+* {   
+    --bg-btn-primary-default: transparent;
+    --bg-btn-primary-hover: var(--neutral-800);
+    --bg-btn-primary-active: var(--neutral-800);
+
+    --border-btn-primary-default: var(--neutral-800);
+
+    --label-positive-primary: var(--neutral-800);
+
+    --label-negative-primary: var(--neutral-100);
+}

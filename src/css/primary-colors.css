@@ -1,3 +1,15 @@
-* {
+* {   
     --blue-500: #252DFF;
+
+    --neutral-0: #FFFFFF;
+    --neutral-100: #FAFAFA;
+    --neutral-200: #F1F1F1;
+    --neutral-800: #242322;
+    --neutral-900: #000000;
+
+    --orange-500: #E59C33;
+    
+    --pink-500: #D80EE4;    
+
+    --turquoise-500: #20CE94;
 }
