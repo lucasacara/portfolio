@@ -4,7 +4,7 @@ import Header from '@/components/global/Header.vue';
 
 <template>
     <div class="MainContainer">
-        <Header></Header>
+        <Header logoColor="blue"></Header>
     </div>
 </template>
 

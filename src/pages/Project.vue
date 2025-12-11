@@ -1,75 +1,63 @@
 <template>
-    <div id="ProjectContainer">
-        <Header></Header>
-        <h1>{{ gProjTitle }}</h1>
-        <h2>{{ gProjSubtitle }}</h2>
-        <p>{{ gProjDescription }}</p>
-        <p>*Este é um projeto desenvolvido durante a graduação em Design Visual para fins acadêmicos, não tendo
-            quaisquer vínculos com as marcas ou clientes citados e exibidos.</p>
-    </div>
+	<div id="ProjectContainer">
+		<Header logoColor="blue"></Header>
+		<h1>{{ gProject.title }}</h1>
+		<h2>{{ gProject.subtitle }}</h2>
+		<p>{{ gProject.description }}</p>
+		<p v-show="gProject.academyProject">
+			*Este é um projeto desenvolvido durante a graduação em Design Visual
+			para fins acadêmicos, não tendo quaisquer vínculos com as marcas ou
+			clientes citados e exibidos.
+		</p>
+	</div>
 </template>
 
 <script setup>
-// IMPORTS
-import Header from '@/components/global/Header.vue';
-import projectsJSON from '@/json/projects.json';
-import { useRoute, useRouter } from 'vue-router';
+	// IMPORTS
+	import Header from "@/components/global/Header.vue";
+	import projectsJSON from "@/json/projects.json";
+	import { useRoute, useRouter } from "vue-router";
+	import { Project } from "@/js/utils.js";
 
-// PROPS
-const props = defineProps({
-    id: {
-        type: String,
-        required: true,
-    },
-})
+	// GLOBAL VARIABLES
+	var gProject = new Project();
 
-class Project {
-    constructor(title, description) {
-        this.title = title;
-        this.description = description;
-    }
-}
+	// MAIN FUNCTION
+	main();
 
-// GLOBAL VARIABLES
-var gProjTitle,
-    gProjSubtitle,
-    gProjDescription = "";
+	function main() {
+		const route = useRoute();
+		const router = useRouter();
 
-// MAIN FUNCTION
-main();
+		let lProjAux = projectsJSON[route.params.id];
 
-function main() {
-    const route = useRoute();
-    const router = useRouter();
-
-    let lProject = projectsJSON[route.params.id];
-
-    if (lProject) {
-        gProjTitle = lProject.title;
-        gProjSubtitle = lProject.subtitle;
-        gProjDescription = lProject.description;
-    } else {
-        router.push("/not-found");
-    }
-}
+		if (lProjAux) {
+			gProject.title = lProjAux.title;
+			gProject.subtitle = lProjAux.subtitle;
+			gProject.description = lProjAux.description;
+			gProject.academyProject = lProjAux.academyProject;
+		} else {
+			router.push("/not-found");
+		}
+	}
 </script>
 
 <style scoped>
-#ProjectContainer {
-    position: relative;
-    width: 100%;
-    height: 100%;
+	#ProjectContainer {
+		position: relative;
+		width: 100%;
+		height: 100%;
 
-    background-color: #FFFFFF;
+		background-color: #ffffff;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 
-    overflow-x: hidden;
-    overflow-y: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
 
-    box-sizing: border-box;
-}
+		box-sizing: border-box;
+	}
 </style>

@@ -5,7 +5,7 @@ import Header from '@/components/global/Header.vue';
 
 <template>
     <div class="MainContainer">
-        <Header></Header>
+        <Header logoColor="white"></Header>
         <GridProjects></GridProjects>
     </div>
 </template>
