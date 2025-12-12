@@ -36,3 +36,7 @@ export function getProjectByID(pID) {
 
   return lProject;
 }
+
+export function getSVG(pID) {
+
+}

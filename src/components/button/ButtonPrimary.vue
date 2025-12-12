@@ -1,7 +1,9 @@
 <template>
 	<RouterLink :to="props.href">
 		<button>
-			<div class="svg-container"></div>
+			<Suspense>
+			<SvgContainer id="chevronRight"></SvgContainer>
+			</Suspense>
 			<span class="m-bd">{{ props.text }}</span>
 		</button>
 	</RouterLink>
@@ -9,7 +11,7 @@
 
 <script setup>
 	import { RouterLink } from "vue-router";
-	import { computed } from "vue";
+	import SvgContainer from "../global/SvgContainer.vue";
 
 	const props = defineProps({
 		text: {
@@ -53,22 +55,10 @@
 		&:hover {
 			background-color: var(--bg-btn-primary-hover);
 			color: var(--label-negative-primary);
-
-			.svg-container {
-				background-color: #fff;
-			}
 		}
 
 		&:active {
 			background-color: var(--bg-btn-primary-active);
 		}
-	}
-
-	button .svg-container {
-		width: 16px;
-		height: 16px;
-
-		background-color: #0000001a;
-		transition: ease-in-out 0.075s;
 	}
 </style>
