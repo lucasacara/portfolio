@@ -12,10 +12,23 @@
     line-height: 40px;
 }
 
+.g-rg {
+    font-family: 'Expose', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+}
 
 .m-bd {
     font-family: 'Expose', sans-serif;
     font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.m-rg {
+    font-family: 'Expose', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }

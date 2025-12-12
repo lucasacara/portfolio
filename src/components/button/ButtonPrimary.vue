@@ -1,10 +1,9 @@
 <template>
 	<RouterLink :to="props.href">
 		<button>
-			<Suspense>
-			<SvgContainer id="chevronRight"></SvgContainer>
-			</Suspense>
+			<SvgContainer id="chevronLeft" v-if="props.icon == 'left'" />
 			<span class="m-bd">{{ props.text }}</span>
+			<SvgContainer id="chevronRight" v-if="props.icon == 'right'" />
 		</button>
 	</RouterLink>
 </template>
@@ -21,6 +20,14 @@
 		href: {
 			type: String,
 			required: true,
+		},
+		icon: {
+			type: String,
+			required: false,
+			default: "none",
+			validator(value) {
+				return ["none", "left", "right"].includes(value);
+			},
 		},
 	});
 </script>

@@ -3,7 +3,9 @@
 </template>
 
 <script setup>
-	import { computed, ref, toRaw, watch, defineAsyncComponent } from "vue";
+	import chevronLeft from "/svg/ic-chevronLeft.svg?raw";
+	import chevronRight from "/svg/ic-chevronRight.svg?raw";
+	import { computed } from "vue";
 
 	const props = defineProps({
 		id: {
@@ -17,16 +19,24 @@
 		},
 	});
 
-	const SVG_SRC = `/svg/ic-${props.id}.svg?raw`;
 	const SVG_COLOR = computed(() => `color: ${props.color}`);
-	const SVG_HTML = await fetch(SVG_SRC)
-		.then((response) => response.blob())
-		.then((data) => {
-			return data.text();
-		})
-		.catch((error) => {
-			console.error(error);
-		});
+	var SVG_HTML = "";
+
+	switch (props.id) {
+		case "chevronLeft": {
+			SVG_HTML = chevronLeft;
+			break;
+		}
+
+		case "chevronRight": {
+			SVG_HTML = chevronRight;
+			break;
+		}
+	
+		default: {
+			break;
+		}
+	}
 </script>
 
 <style scoped lang="scss">
