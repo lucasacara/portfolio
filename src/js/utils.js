@@ -76,9 +76,10 @@ export function getProjectByID(pID) {
 			}
 		}
 
-		if (lProjAux.medias) {
-			for (let lMedia of lProjAux.medias) {
-				lProject.medias.push(new Media(lMedia.type, lMedia.url));
+		if (lProjAux.images) {
+			for (let lImage of lProjAux.images) {
+				console.log(lImage);
+				lProject.medias.push(new Media("image", `/img/project/${pID}/${lImage}`));
 			}
 		}
 

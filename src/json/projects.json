@@ -1,146 +1,386 @@
 {
-    "mat-inset-capsulas": {
-        "title": "Mat Inset Cápsulas",
-        "subtitle": "Redesign de embalagem de inseticidas",
-        "description": "E se os inseticidas domésticos não fossem vendidos em grandes recipientes metálicos, difíceis de manusear e pouco recicláveis?\nEste projeto propõe um novo sistema de embalagens para a marca de inseticidas Mat Inset. Utilizando um sistema de refil por cápsulas, esta nova embalagem permite que o inseticidas seja reutilizado diversas vezes, acrescentando água no seu interior. O resultado é um produto mais sustentável ergonômico.",
-        "academyProject": true,
+	"mat-inset-capsulas": {
+		"title": "Mat Inset Cápsulas",
+		"subtitle": "Redesign de embalagem de inseticidas",
+		"description": "E se os inseticidas domésticos não fossem vendidos em grandes recipientes metálicos, difíceis de manusear e pouco recicláveis?\n\nEste projeto propõe um novo sistema de embalagens para a marca de inseticidas Mat Inset. Utilizando um sistema de refil por cápsulas, esta nova embalagem permite que o inseticidas seja reutilizado diversas vezes, acrescentando água no seu interior. O resultado é um produto mais sustentável ergonômico.",
+		"academyProject": true,
+		"awards": [
+			{
+				"title": "🥇 LAD Estudiante",
+				"event": "Latin Design Awards 2023"
+			},
+			{
+				"title": "🥇 1º Lugar",
+				"event": "Prêmio Bornancini de Design 2022"
+			},
+			{
+				"title": "🏅 3º Lugar",
+				"event": "Brasil Design Awards 2023"
+			}
+		],
+		"credits": [
+			{
+				"title": "Conceito, Desenho e Modelagens 3D:",
+				"name": "Lucas Acara"
+			},
+			{
+				"title": "Orientação:",
+				"name": "Fernando Bakos"
+			},
+			{
+				"title": "Co-orientação:",
+				"name": "Leandra Saldanha"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp",
+			"10.webp",
+			"11.webp",
+			"12.gif",
+			"13.webp"
+		],
+		"youtubeVideo": "V7TN43ixDUE",
+		"behanceURL": "www.behance.net/gallery/177737243/Mat-Inset-Capsulas"
+	},
+	"amor-pra-se-lembrar": {
+		"title": "Amor pra se lembrar",
+		"subtitle": "Campanha de Dia dos Namorados",
+		"description": "Neugebauer é uma marca de chocolates localizada na região sul do Brasil. Este projeto, produzido em âmbito acadêmico, idealiza uma campanha desta marca para o Dia dos Namorados, intitulada \"Amor pra se lembrar\".\n\nVoltada aos casais enamorados - sejam eles novos ou de longa data -, esta campanha premia o consumidor com uma pelúcia a cada 10 produtos Neugebauer comprados.\n\nCada uma das pelúcias é inspirada em um dos principais produtos da marca: os chocolates Bib's, Napolitano e Stikadinho, além do doce de leite Mu-mu.",
+		"academyProject": true,
+		"awards": [],
+		"credits": [
+			{
+				"title": "Identidade da campanha:",
+				"name": "Caroline Weber, Lauren Padilha, Lucas Acara"
+			},
+			{
+				"title": "Materiais gráficos (PDV):",
+				"name": "Caroline Weber, Lauren Padilha"
+			},
+			{
+				"title": "Ilustrações 2D:",
+				"name": "Lauren Padilha"
+			},
+			{
+				"title": "Modelagem 3D e Mockups:",
+				"name": "Lucas Acara"
+			},
+			{
+				"title": "Orientação:",
+				"name": "Marcos Bernardo Lamb"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp",
+			"10.webp",
+			"11.webp",
+			"12.webp",
+			"13.webp",
+			"14.webp",
+			"15.webp",
+			"16.gif"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177737375/Neugebauer-Amor-pra-se-lembrar"
+	},
+	"acampamento-pokemon": {
+		"title": "Acampamento Pokémon",
+		"subtitle": "Concept Art",
+		"description": "Seedot, Oddish e Drifloon saem para uma noite na floresta.\n\nProduzi esta arte juntando duas coisas que adorava quando era criança: Pokémon e massa de modelar. Porém, aqui a massinha dá lugar à modelagem 3D (CGI), produzida utilizando o software Blender e a renderização Eevee.",
+		"academyProject": true,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Desenho e Modelagem 3D:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Orientação:",
+				"name": "Thiago Bulhões"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177738185/Acampamento-Pokmon"
+	},
+	"lucas-acara": {
+		"title": "Lucas Acara",
+		"subtitle": "Personal Branding",
+		"description": "Este projeto de Branding foi um mergulho dentro de mim - seja enquanto profissional, seja enquanto pessoa. Não que eu tenha muitos anos de carreira ou uma grande experiência de vida para compartilhar, mas desde sempre fui uma pessoa múltipla, não-linear, volátil, mutável.\n\nMeus gostos e meus desejos vêm de repente e se vão com a mesma facilidade. Hora amo explorar X, hora já não aguento mais ver isso, pois meu novo interesse é trabalhar com Y. Por isso, produzir uma Identidade Visual que me represente não é exatamente simples, pois não sou uma só coisa. Eu nunca fui. Provavelmente nunca vou ser. Os Fragmentos - unidade visual repetida nos desdobramentos - são a sintetização de cada pequena parte que me compõe.\n\nLucas Acara é um profissional generalista e uma pessoa apaixonada por materializar o que seu coração está transbordando naquele momento. Lucas Acara é uma mudança diária e uma auto adaptação constante de si mesmo. Lucas Acara é Designer, mas Metamorfo, pois não é capaz de se encaixar em uma única definição possível.",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Naming:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Identidade Visual:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Orientação:",
+				"name": "Leandra Saldanha"
+			},
+            {
+				"title": "Co-orientação:",
+				"name": "Ana Maldonado"
+			}
+		],
+		"images": [
+			"01.gif",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.gif",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp",
+			"10.webp",
+			"11.gif",
+			"12.gif",
+			"13.webp",
+			"14.webp",
+			"15.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177737129/Lucas-Acara-Personal-Branding"
+	},
+	"contrate-como-quiser": {
+		"title": "Contrate como quiser",
+		"subtitle": "Reposicionamento e material gráfico para a Growyx",
+		"description": "Em 2023, a Growyx atualizou sua cartela de serviços: a startup, que até então só intermediava contratações de freelancers, passou também a realizar serviços de Outsourcing e Recrutamento e Seleção.\n\nPorém, esta situação gerou um desafio: como comunicar tudo o que a Growyx faz, sem que isso fique confuso demais para os clientes entenderem?\n\nFoi assim que nasceu o mote \"Contrate como quiser, trabalhe de onde estiver\", conversando simultaneamente com empresas, recrutadores e profissionais. Este projeto reflete o início desta nova fase da empresa, com o lançamento da campanha e dos materiais gráficos distribuídos durante o South Summit 2023 em Porto Alegre (RS - Brasil).",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Reposicionamento:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Ilustrações e Material Gráfico:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Cliente:",
+				"name": "Growyx"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.gif",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/178797765/Growyx-Contrate-como-quiser"
+	},
+	"materiopedia": {
+		"title": "Materiopedia",
+		"subtitle": "Um guia de Materiais e Processos para Designers",
+		"description": "\"Materiopedia\" é um projeto editorial que dá forma a um catálogo de materiais e técnicas de impressão. Tendo designers como seu público-alvo, este pequeno livro descreve os melhores usos para diferentes tipos de materiais (como papeis, polímeros, madeira e vidro), sempre trazendo exemplos práticos de utilização.\n\nOs grafismos presentes na capa foram produzidos manualmente, utilizando embalagens e diferentes materiais como carimbo. Somado às texturas do papel reciclado no qual o livro é impresso, o projeto gráfico convida o leitor a prestar mais atenção nos materiais que compõem o livro, introduzindo-o ao assunto desde o primeiro contato.",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Projeto Gráfico:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Capa:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Textos:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Orientação:",
+				"name": "Elisa Guerra Eichenberg"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177740457/Materiopedia"
+	},
+	"layoffs-o-manifesto": {
+		"title": "Layoffs, o Manifesto",
+		"subtitle": "Website e plataforma para profissionais demitidos",
+		"description": "No início de 2023, uma onda de demissões em massa tomou conta do mercado internacional - em especial, no setor de tecnologia. Os \"layoffs\", como foram chamados, deixaram centenas de milhares de trabalhadores sem sua principal fonte de renda.\n\nCriando uma plataforma pública e 100% gratuita, a Growyx decidiu promover um manifesto público a favor destes profissionais. Através desta plataforma, foi possível dar maior visibilidade aos perfis de todos os trabalhadores que se inscrevessem, permitindo que recrutadores pudessem dar prioridade à contratação destes profissionais.",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Planejamento da campanha:",
+				"name": "Ariane Gomes, Caio Figueiredo, Camila Bianco, Lucas Acara"
+			},
+            {
+				"title": "Interfaces (UI) do website:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Copywriting:",
+				"name": "Caio Figueiredo, Lucas Acara"
+			},
+            {
+				"title": "Programação e implementação da plataforma:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Cliente:",
+				"name": "Growyx"
+			}
+		],
+		"images": [
+			"01.gif",
+			"02.webp",
+			"03.gif",
+			"04.webp",
+			"05.gif",
+			"06.webp",
+			"07.webp",
+			"08.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/185296017/Growyx-Manifesto-Layoffs"
+	},
+	"mercado-nao-visivel": {
+		"title": "Mercado Não-Visível",
+		"subtitle": "Fotografia experimental",
+		"description": "Mercado Não-Visível é um projeto autoral que mescla elementos reais para criar uma realidade alternativa. Com grande influência do Realismo Mágico, cada fotografia retrata uma forma diferente de encarar o Mercado Público de Porto Alegre - ponto tradicional e turístico da cidade -, onde detalhes podem passar despercebidos se não forem observados com atenção.",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Fotografias:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Edições digitais:",
+				"name": "Lucas Acara"
+			},
+            {
+				"title": "Orientação:",
+				"name": "Raul Krebs"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp",
+			"10.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177738325/Mercado-Nao-Visivel"
+	},
+	"bestiario-de-tons": {
+		"title": "Bestiário de Tons",
+		"subtitle": "Um catálogo de monstros internos",
+		"description": "Bestiário de Tons é um projeto autoral que personifica transtornos e alguns dos meus medos pessoais, onde empresto meu rosto e corpo para dar vida aos meus monstros internos.\n\nEste projeto de manipulação digital de fotografias foi produzido em 2021, durante o isolamento causado pela pandemia de Covid-19.",
+		"academyProject": false,
         "awards": [
+			{
+				"title": "🏅 Projeto destaque:",
+				"event": "Revista \"Por Aqui\" (6ª Edição)",
+                "url": "https://www.revistadsg.espm.br/e06-poraqui/"
+			}
+		],
+		"credits": [
+			{
+				"title": "Projeto, Fotografia e Edição Digital:",
+				"name": "Lucas Acara"
+			},
             {
-                "title": "🥇 LAD Estudiante",
-                "event": "Latin Design Awards 2023"
-            },
+				"title": "Orientação:",
+				"name": "Antonio Rabàdan"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.webp",
+			"03.webp",
+			"04.webp",
+			"05.webp",
+			"06.webp",
+			"07.webp",
+			"08.webp",
+			"09.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": "https://www.behance.net/gallery/177738581/Bestiario-de-Tons"
+	},
+	"identidade": {
+		"title": "Identidade",
+		"subtitle": "Fotografia experimental",
+		"description": "Identidade é um conjunto de fotografias sobre raízes. O espelho - presente nas imagens - não se preocupa em refletir um rosto, mas aquilo que nos compõe, que faz de nós seres humanos. Ao olhar para o espelho, vemos nossas vivências, nossa história e a natureza da qual somos feitos.",
+		"academyProject": false,
+        "awards": [],
+		"credits": [
+			{
+				"title": "Fotografias:",
+				"name": "Lucas Acara"
+			},
             {
-                "title": "🥇 1º Lugar",
-                "event": "Prêmio Bornancini de Design 2022"
-            },
+				"title": "Modelo:",
+				"name": "Laura Jandrey Leismann"
+			},
             {
-                "title": "🏅 3º Lugar",
-                "event": "Brasil Design Awards 2023"
-            }
-        ],
-        "credits": [
-            {
-                "title": "Conceito, Desenho e Modelagens 3D:",
-                "name": "Lucas Acara"
-            },
-            {
-                "title": "Orientação:",
-                "name": "Fernando Bakos"
-            },
-            {
-                "title": "Co-orientação:",
-                "name": "Leandra Saldanha"
-            }
-        ],
-        "medias": [
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/01.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/02.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/03.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/04.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/05.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/06.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/07.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/08.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/09.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/10.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/11.webp"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/12.gif"
-            },
-            {
-                "type": "image",
-                "url": "/img/project/mat-inset-capsulas/13.webp"
-            }
-        ],
-        "youtubeVideo": "V7TN43ixDUE",
-        "behanceURL": "www.behance.net/gallery/177737243/Mat-Inset-Capsulas"
-    },
-    "amor-pra-se-lembrar": {
-        "title": "Amor pra se lembrar",
-        "subtitle": "Campanha de Dia dos Namorados",
-        "description": "Neugebauer é uma marca de chocolates localizada na região sul do Brasil. Este projeto, produzido em âmbito acadêmico, idealiza uma campanha desta marca para o Dia dos Namorados, intitulada \"Amor pra se lembrar\". Voltada aos casais enamorados - sejam eles novos ou de longa data -, esta campanha premia o consumidor com uma pelúcia a cada 10 produtos Neugebauer comprados. Cada uma das pelúcias é inspirada em um dos principais produtos da marca: os chocolates Bib's, Napolitano e Stikadinho, além do doce de leite Mu-mu.",
-        "academyProject": true
-    },
-    "acampamento-pokemon": {
-        "title": "Acampamento Pokémon",
-        "subtitle": "Concept Art",
-        "description": "Seedot, Oddish e Drifloon saem para uma noite na floresta. Produzi esta arte juntando duas coisas que adorava quando era criança: Pokémon e massa de modelar. Porém, aqui a massinha dá lugar à modelagem 3D (CGI), produzida utilizando o software Blender e a renderização Eevee.",
-        "academyProject": true
-    },
-    "lucas-acara": {
-        "title": "Lucas Acara",
-        "subtitle": "Personal Branding",
-        "description": "Este projeto de Branding foi um mergulho dentro de mim - seja enquanto profissional, seja enquanto pessoa. Não que eu tenha muitos anos de carreira ou uma grande experiência de vida para compartilhar, mas desde sempre fui uma pessoa múltipla, não-linear, volátil, mutável. Meus gostos e meus desejos vêm de repente e se vão com a mesma facilidade. Hora amo explorar X, hora já não aguento mais ver isso, pois meu novo interesse é trabalhar com Y. Por isso, produzir uma Identidade Visual que me represente não é exatamente simples, pois não sou uma só coisa. Eu nunca fui. Provavelmente nunca vou ser. Os Fragmentos - unidade visual repetida nos desdobramentos - são a sintetização de cada pequena parte que me compõe. Lucas Acara é um profissional generalista e uma pessoa apaixonada por materializar o que seu coração está transbordando naquele momento. Lucas Acara é uma mudança diária e uma auto adaptação constante de si mesmo. Lucas Acara é Designer, mas Metamorfo, pois não é capaz de se encaixar em uma única definição possível.",
-        "academyProject": false
-    },
-    "contrate-como-quiser": {
-        "title": "Contrate como quiser",
-        "subtitle": "Reposicionamento e material gráfico para a Growyx",
-        "description": "Em 2023, a Growyx atualizou sua cartela de serviços: a startup, que até então só intermediava contratações de freelancers, passou também a realizar serviços de Outsourcing e Recrutamento e Seleção. Porém, esta situação gerou um desafio: como comunicar tudo o que a Growyx faz, sem que isso fique confuso demais para os clientes entenderem? Foi assim que nasceu o mote \"Contrate como quiser, trabalhe de onde estiver\", conversando simultaneamente com empresas, recrutadores e profissionais. Este projeto reflete o início desta nova fase da empresa, com o lançamento da campanha e dos materiais gráficos distribuídos durante o South Summit 2023 em Porto Alegre (RS - Brasil).",
-        "academyProject": false
-    },
-    "materiopedia": {
-        "title": "Materiopedia",
-        "subtitle": "Um guia de Materiais e Processos para Designers",
-        "description": "\"Materiopedia\" é um projeto editorial que dá forma a um catálogo de materiais e técnicas de impressão. Tendo designers como seu público-alvo, este pequeno livro descreve os melhores usos para diferentes tipos de materiais (como papeis, polímeros, madeira e vidro), sempre trazendo exemplos práticos de utilização. Os grafismos presentes na capa foram produzidos manualmente, utilizando embalagens e diferentes materiais como carimbo. Somado às texturas do papel reciclado no qual o livro é impresso, o projeto gráfico convida o leitor a prestar mais atenção nos materiais que compõem o livro, introduzindo-o ao assunto desde o primeiro contato.",
-        "academyProject": true
-    },
-    "layoffs-o-manifesto": {
-        "title": "Layoffs, o Manifesto",
-        "subtitle": "Website e plataforma para profissionais demitidos",
-        "description": "No início de 2023, uma onda de demissões em massa tomou conta do mercado internacional - em especial, no setor de tecnologia. Os \"layoffs\", como foram chamados, deixaram centenas de milhares de trabalhadores sem sua principal fonte de renda. Criando uma plataforma pública e 100% gratuita, a Growyx decidiu promover um manifesto público a favor destes profissionais. Através desta plataforma, foi possível dar maior visibilidade aos perfis de todos os trabalhadores que se inscrevessem, permitindo que recrutadores pudessem dar prioridade à contratação destes profissionais.",
-        "academyProject": true
-    },
-    "mercado-nao-visivel": {
-        "title": "Mercado Não-Visível",
-        "subtitle": "Fotografia experimental",
-        "description": "Mercado Não-Visível é um projeto autoral que mescla elementos reais para criar uma realidade alternativa. Com grande influência do Realismo Mágico, cada fotografia retrata uma forma diferente de encarar o Mercado Público de Porto Alegre - ponto tradicional e turístico da cidade -, onde detalhes podem passar despercebidos se não forem observados com atenção.",
-        "academyProject": true
-    },
-    "bestiario-de-tons": {
-        "title": "Bestiário de Tons",
-        "subtitle": "Um catálogo de monstros internos",
-        "description": "Bestiário de Tons é um projeto autoral que personifica transtornos e alguns dos meus medos pessoais, onde empresto meu rosto e corpo para dar vida aos meus monstros internos. Este projeto de manipulação digital de fotografias foi produzido em 2021, durante o isolamento causado pela pandemia de Covid-19.",
-        "academyProject": true
-    },
-    "identidade": {
-        "title": "Identidade",
-        "subtitle": "Fotografia experimental",
-        "description": "Identidade é um conjunto de fotografias sobre raízes. O espelho - presente nas imagens - não se preocupa em refletir um rosto, mas aquilo que nos compõe, que faz de nós seres humanos. Ao olhar para o espelho, vemos nossas vivências, nossa história e a natureza da qual somos feitos.",
-        "academyProject": true
-    }
+				"title": "Orientação:",
+				"name": "Raul Krebs"
+			}
+		],
+		"images": [
+			"01.webp",
+			"02.jpg",
+			"03.jpg",
+			"04.webp",
+			"05.webp"
+		],
+		"youtubeVideo": "",
+		"behanceURL": ""
+	}
 }

@@ -57,17 +57,29 @@
 							/>
 						</div>
 					</div>
-					<CardVideoPreview v-show="gProject.youtubeVideo" :videoKey="gProject.youtubeVideo" />
+					<CardVideoPreview
+						v-show="gProject.youtubeVideo"
+						:videoKey="gProject.youtubeVideo"
+					/>
 				</div>
 			</section>
 
 			<section class="section-medias">
 				<div class="innerContainer">
-					<AnimShowOnView v-for="media in gProject.medias" class="AnimShowOnView">
+					<AnimShowOnView
+						v-for="media in gProject.medias"
+						class="AnimShowOnView"
+					>
 						<img :src="media.src" />
 					</AnimShowOnView>
 				</div>
 			</section>
+
+			<ButtonPrimary
+				text="Voltar aos projetos"
+				href="/"
+				icon="left"
+			></ButtonPrimary>
 		</div>
 	</div>
 </template>
@@ -151,6 +163,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		padding-bottom: 40px;
 	}
 
 	.section-info {
@@ -269,7 +283,7 @@
 		width: 100%;
 		height: auto;
 
-		padding: 0px 42px;
+		padding: 0px 40px 40px 40px;
 
 		display: flex;
 		flex-direction: column;
