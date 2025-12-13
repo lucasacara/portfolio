@@ -5,7 +5,7 @@ import "./css/text-styles.css";
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './pages/router.js';
+import router from './js/router.js';
 
 const app = createApp(App);
 app.use(router)

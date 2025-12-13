@@ -17,7 +17,9 @@ export class Project {
 		academyProject = false,
 		awards = [],
 		credits = [],
-		medias = []
+		medias = [],
+		youtubeVideo = "",
+		behanceURL = ""
 	) {
 		this.title = title;
 		this.subtitle = subtitle;
@@ -26,6 +28,8 @@ export class Project {
 		this.awards = awards;
 		this.credits = credits;
 		this.medias = medias;
+		this.youtubeVideo = youtubeVideo;
+		this.behanceURL = behanceURL;
 	}
 }
 
@@ -77,9 +81,12 @@ export function getProjectByID(pID) {
 				lProject.medias.push(new Media(lMedia.type, lMedia.url));
 			}
 		}
+
+		lProject.youtubeVideo = lProjAux.youtubeVideo;
+		lProject.behanceURL = lProjAux.behanceURL;
 	}
 
-	console.log(lProject)
+	console.log(lProject);
 
 	return lProject;
 }

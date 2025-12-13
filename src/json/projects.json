@@ -84,12 +84,10 @@
             {
                 "type": "image",
                 "url": "/img/project/mat-inset-capsulas/13.webp"
-            },
-            {
-                "type": "video",
-                "url": ""
             }
-        ]
+        ],
+        "youtubeVideo": "V7TN43ixDUE",
+        "behanceURL": "www.behance.net/gallery/177737243/Mat-Inset-Capsulas"
     },
     "amor-pra-se-lembrar": {
         "title": "Amor pra se lembrar",

@@ -8,6 +8,7 @@
 
     --label-positive-primary: var(--neutral-800);
     --label-positive-secondary: var(--neutral-800-op70);
-
     --label-negative-primary: var(--neutral-100);
+
+    --overlay-positive-low: var(--neutral-800-op10);
 }

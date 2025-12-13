@@ -36,6 +36,13 @@ const allowedPathsRegex = [
 const router = createRouter({
 	history: createWebHistory(),
 	routes,
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition;
+		} else {
+			return { top: 0 };
+		}
+	},
 });
 
 router.beforeEach(async (to, from) => {
@@ -51,14 +58,14 @@ router.beforeEach(async (to, from) => {
 });
 
 router.afterEach(async (to, from) => {
-  // Se for a página de um projeto, busca o título do mesmo para acrescentar à aba
+	// Se for a página de um projeto, busca o título do mesmo para acrescentar à aba
 	if (router.currentRoute.value.path.includes("/project/")) {
 		let lProjTitle = getProjectByID(
 			router.currentRoute.value.params.id
 		).title;
 
 		if (lProjTitle != "") {
-      router.currentRoute.value.meta = { title: lProjTitle }
+			router.currentRoute.value.meta = { title: lProjTitle };
 		}
 	}
 

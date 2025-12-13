@@ -1,5 +1,5 @@
 <template>
-	<div id="ProjectContainer">
+	<div id="ProjectContainer" ref="animContent">
 		<Header logoColor="blue"></Header>
 		<div class="pageContainer">
 			<ButtonPrimary
@@ -30,9 +30,10 @@
 							</p>
 						</div>
 						<ButtonPrimary
-							href=""
+							:href="gProject.behanceURL"
 							text="Ver no Behance"
 							icon="right"
+							v-show="gProject.behanceURL"
 						/>
 					</div>
 					<div class="secondary">
@@ -56,12 +57,15 @@
 							/>
 						</div>
 					</div>
+					<CardVideoPreview v-show="gProject.youtubeVideo" :videoKey="gProject.youtubeVideo" />
 				</div>
 			</section>
 
 			<section class="section-medias">
 				<div class="innerContainer">
-					<img v-for="media in gProject.medias" :src="media.src" />
+					<AnimShowOnView v-for="media in gProject.medias" class="AnimShowOnView">
+						<img :src="media.src" />
+					</AnimShowOnView>
 				</div>
 			</section>
 		</div>
@@ -75,9 +79,27 @@
 	import { getProjectByID, Project } from "@/js/utils.js";
 	import ButtonPrimary from "@/components/button/ButtonPrimary.vue";
 	import ChipTextPair from "@/components/chip/ChipTextPair.vue";
+	import CardVideoPreview from "@/components/card/CardVideoPreview.vue";
+	import { onMounted, ref } from "vue";
+	import AnimShowOnView from "@/components/animation/AnimShowOnView.vue";
 
 	// GLOBAL VARIABLES
 	var gProject = new Project();
+	const animContent = ref();
+	const animBool = ref(false);
+
+	const observer = new IntersectionObserver(
+		([entry]) => {
+			animBool.value = entry.isIntersecting;
+		},
+		{
+			threshold: 0.5,
+		}
+	);
+
+	onMounted(() => {
+		observer.observe(animContent.value);
+	});
 
 	// MAIN FUNCTION
 	main();
@@ -95,6 +117,15 @@
 </script>
 
 <style scoped lang="scss">
+	.AnimShowOnView {
+		img {
+			position: relative;
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+	}
+
 	#ProjectContainer {
 		position: relative;
 		width: 100%;
@@ -257,14 +288,6 @@
 			align-items: flex-start;
 
 			gap: 8px;
-
-			img {
-				position: relative;
-				width: 100%;
-				height: auto;
-
-				border-radius: 4px;
-			}
 		}
 	}
 </style>
